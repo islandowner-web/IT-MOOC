@@ -1,0 +1,70 @@
+{% extends 'usercenter-base.html' %}
+{% block title %}我的收藏{% endblock %}
+{% load staticfiles %}
+{% block custom_bread %}
+    <li><a href="{% url 'index' %}">首页</a>></li>
+    <li><a href="{% url 'users:info' %}">个人中心</a>></li>
+    <li><a href="">我的收藏</a></li>
+{% endblock %}
+
+{% block right_form %}
+    <div class="right">
+        <div class="personal_des Releasecont">
+            <div class="user_center_my_course" style="margin-bottom: 20px">
+                收藏教师
+            </div>
+        </div>
+        <div class="personal_des permessage">
+
+            <div class="my_fav_teacher_bigbox">
+                {% for teacher in teacher_list %}
+                    <div class="my_fav_teacher_detailbox clearfix">
+                        <div class="leftbox fl">
+                            <a href="{% url 'org:teacher_detail' teacher.id %}">
+                                <img src="{{ teacher.image.url }}" alt="">
+                            </a>
+                        </div>
+                        <div class="centerbox fl">
+                            <div style="height: 30px"></div>
+                            <div class="middle" style="height: 80px">{{ teacher.name }}</div>
+                            <div class="bottom" style="height: 40px">{% if teacher.gender == 'female' %}女{% else %}
+                                男{% endif %}&nbsp;&nbsp;&nbsp;
+                                <a href="{% url 'org:home' teacher.org.id %}" style="color: #000;">{{ teacher.org }}</a>&nbsp;&nbsp;&nbsp;
+                                {{ teacher.work_position }}
+                            </div>
+                        </div>
+                        <div class="rightbox fl">
+                            <div class="del_fav_tea jsDeleteFav_teacher" data-favid="{{ teacher.id }}">不再关注</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block custom_js %}
+    <script type="text/javascript">
+        $('.jsDeleteFav_teacher').on('click', function () {
+            var _this = $(this),
+                favid = _this.attr('data-favid');
+            $.ajax({
+                cache: false,
+                type: "POST",
+                url: "{% url 'op:fav' %}",
+                data: {
+                    fav_type: 2,
+                    fav_id: favid,
+                    csrfmiddlewaretoken: '{{ csrf_token }}'
+                },
+                async: true,
+                success: function (data) {
+                    Dml.fun.winReload();
+                }
+            });
+        });
+    </script>
+{% endblock %}
+
+

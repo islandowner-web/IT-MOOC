@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}课程列表{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="detail_main_head" style="background: url({% static 'images/tealist/courselist.png' %});">
+            <div class="wp">
+                <div class="top_daohang">
+                    <ul>
+                        <li><a href="{% url 'index' %}">首页</a>&nbsp;>&nbsp;</li>
+                        <li><a href="">所有课程</a></li>
+                    </ul>
+                </div>
+                <div class="main_title">
+                    <h1>全部课程</h1>
+                </div>
+                <div class="desc_title">
+                    <h3>课程数:&nbsp;{{ course_nums }}&nbsp;个</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div style="height: 20px;width: 100%"></div>
+
+    <section>
+        <div class="wp">
+            <div class="list" style="margin-top:0;">
+                <div class="left layout">
+                    <div class="head">
+                        <ul class="tab_header">
+                            <li class="{% if sort == '' %}active{% endif %}"><a href="?sort=">最新 </a></li>
+                            <li class="{% if sort == 'hot' %}active{% endif %}"><a href="?sort=hot">最热门</a></li>
+                            <li class="{% if sort == 'students' %}active{% endif %}"><a href="?sort=students">参与人数</a>
+                            </li>
+                            <li class="{% if sort == 'price' %}active{% endif %}"><a href="?sort=price">付费课程</a></li>
+                        </ul>
+                    </div>
+                    <div id="inWindow">
+                        <div class="tab_cont " id="content">
+                            <div class="group_list">
+                                <div style="width: 100%;min-height: 900px;">
+                                    {% for course in all_courses.object_list %}
+
+                                        <div class="detail_recommand_box fl"
+                                             style="margin: 20px 0px 0 20px;box-shadow: 0 8px 16px 0 rgba(28,31,33,.1);width: 275px;height: 270px;">
+                                            <div class="index_new_course_box"
+                                                 style="height: 100%;width: 100%;margin: 0;padding: 0">
+                                                <a href="{% url 'course:detail' course.id %}"><img
+                                                        src="{{ MEDIA_URL }}{{ course.image }}"
+                                                        alt=""
+                                                        id="index_newcourse_img"></a>
+                                                <div id="index_new_course_title_box">{{ course.name }}</div>
+                                                <div id="index_new_course_desc_box">{{ course.get_degree_display }}&nbsp;&nbsp;&nbsp;&nbsp;学习人数:&nbsp;{{ course.students }}人&nbsp;&nbsp;&nbsp;&nbsp;时长:&nbsp;{{ course.learn_times }}</div>
+                                                <div id="index_new_course_price_box">{% if course.price == 0 %}免费
+                                                    {% else %}{{ course.price }}¥{% endif %}</div>
+                                            </div>
+                                        </div>
+
+                                    {% endfor %}
+                                </div>
+
+                            </div>
+                            <div class="pageturn">
+                                <ul class="pagelist">
+                                    {#                {{ all_orgs.render }}#}
+                                    {% if all_courses.has_previous %}
+                                        <li class="long"><a href="?{{ all_courses.previous_page_number.querystring }}">上一页</a>
+                                        </li>
+                                    {% endif %}
+
+                                    {% for page in all_courses.pages %}
+                                        {% if page %}
+                                            {% ifequal page all_courses.number %}
+                                                <li class="active"><a href="?{{ page.querystring }}">{{ page }}</a></li>
+                                            {% else %}
+                                                <li><a href="?{{ page.querystring }}" class="page">{{ page }}</a></li>
+                                            {% endifequal %}
+                                        {% else %}
+                                            <li class="none">...</li>
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% if all_courses.has_next %}
+                                        <li class="long"><a
+                                                href="?{{ all_courses.next_page_number.querystring }}">下一页</a></li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right layout">
+                    <div class="head">热门课程推荐</div>
+                    <div class="group_recommend">
+
+
+                        <div style="width: 100%;max-height: 910px;overflow: hidden;">
+                            {% for course in hot_courses %}
+                                <div class="detail_recommand_box fl"
+                                     style="margin: 20px 0px 0 20px;box-shadow: 0 8px 16px 0 rgba(28,31,33,.1);width: 275px;height: 270px;left: -15px;">
+                                    <div class="index_new_course_box"
+                                         style="height: 100%;width: 100%;margin: 0;padding: 0">
+                                        <a href="{% url 'course:detail' course.id %}"><img
+                                                src="{{ MEDIA_URL }}{{ course.image }}"
+                                                alt=""
+                                                id="index_newcourse_img"></a>
+                                        <div id="index_new_course_title_box">{{ course.name }}</div>
+                                        <div id="index_new_course_desc_box">{{ course.get_degree_display }}&nbsp;&nbsp;&nbsp;&nbsp;学习人数:&nbsp;{{ course.students }}人&nbsp;&nbsp;&nbsp;&nbsp;时长:&nbsp;{{ course.learn_times }}</div>
+                                        <div id="index_new_course_price_box">{% if course.price == 0 %}免费
+                                            {% else %}{{ course.price }}¥{% endif %}</div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

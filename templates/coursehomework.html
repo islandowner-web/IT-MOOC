@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}课程章节{% endblock %}
+{% block custom_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ncss.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section>
+    <div class="detail_main_head" style="background: url({% static 'images/ndetail/coursevideo.png' %});">
+        <div class="wp">
+            <div class="top_daohang">
+                <ul>
+                    <li><a href="{% url 'index' %}">首页</a>&nbsp;>&nbsp;</li>
+                    <li><a href="{% url 'course:list' %}">公开课</a>&nbsp;>&nbsp;</li>
+                    <li><a href="">课程作业</a></li>
+                </ul>
+            </div>
+            <div class="course_title_bigbox">
+                <div class="topbox">
+                    <p>{{ course.name }}</p>
+                </div>
+                <div class="bottombox clearfix">
+                    <div class="leftbox fl">
+                        <div class="teaheadimg"><img src="{{ course.teacher.image.url }}" alt=""></div>
+                    </div>
+                    <div class="rightbox fl">
+                        <div class="topbox"></div>
+                        <div class="centerbox" style="text-indent: 20px;">
+                            <span>讲师:</span>&nbsp;<span class="normal_font">{{ course.teacher.name }}</span>
+                        </div>
+                        <div class="bottombox" style="text-indent: 20px;">
+                            <span>难度:&nbsp;</span>
+                            <span class="normal_font">{{ course.get_degree_display }}</span>
+                            <i>&nbsp;&nbsp;·&nbsp;&nbsp;</i>
+                            <span>时长:</span>
+                            <span class="normal_font">{{ course.learn_times }}</span>
+                            <i>&nbsp;&nbsp;·&nbsp;&nbsp;</i>
+                            <span>学习人数:</span>
+                            <span class="normal_font">{{ course.students }}</span>
+                            <i>&nbsp;&nbsp;·&nbsp;&nbsp;</i>
+                            <span>点击人数:</span>
+                            <span class="normal_font">{{ course.click_nums }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div style="height: 20px"></div>
+<div style="height: 20px"></div>
+<section>
+    <div class="detail_main_homework_bigbox">
+        <div class="wp">
+            {% for homework in homeworkss %}
+            <div class="homework_mainbox_jx_box">
+                <div class="homework_mainbox">
+                    <div class="topbox">
+                        <div class="qsbox">
+                            <span>问题:</span>&nbsp;&nbsp;{{ homework.question }}
+                        </div>
+                    </div>
+                    <div class="middleline"></div>
+                    <div class="bottombox">
+                        <div class="sebox">
+                            <div class="setheight_fpercent clearfix">
+                                <div class="left fl">
+                                    <div class="sebtn">A</div>
+                                </div>
+                                <div class="right fl">{{ homework.cone }}</div>
+                            </div>
+                            <div class="setheight_fpercent">
+                                <div class="left fl">
+                                    <div class="sebtn">B</div>
+                                </div>
+                                <div class="right fl">{{ homework.ctwo }}</div>
+                            </div>
+                            <div class="setheight_fpercent">
+                                <div class="left fl">
+                                    <div class="sebtn">C</div>
+                                </div>
+                                <div class="right fl">{{ homework.cthree }}</div>
+                            </div>
+                            <div class="setheight_fpercent">
+                                <div class="left fl">
+                                    <div class="sebtn">D</div>
+                                </div>
+                                <div class="right fl">{{ homework.cfour }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="homework_jxbox" id="js_jxbox">
+                    <div class="topbox">
+                        <div class="jxbox js_jxbox">正确答案:&nbsp;&nbsp;<span style="color: green;font-weight: bold">{{ homework.answer }}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您的答案:&nbsp;&nbsp;<p style="display: inline">D</p></div>
+                        <div class="right_or_false" id="qwer">回答正确</div>
+                    </div>
+                    <div class="middleline"></div>
+                    <div class="bottombox">
+                        <div class="main_jx_box">
+                            <span>解析:</span>&nbsp;&nbsp;{{ homework.jiexi }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="submitbtn" id="js_submit_seeas">我已完成，查看答案及解析</div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+
+{% block custom_js %}
+    <script src="{% static 'js/homework.js' %}" type='text/javascript'></script>
+{% endblock %}
+

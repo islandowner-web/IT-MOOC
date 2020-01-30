@@ -1,0 +1,41 @@
+{% extends 'usercenter-base.html' %}
+{% block title %}我的课程{% endblock %}
+{% block custom_bread %}
+    <li><a href="{% url 'index' %}">首页</a>></li>
+    <li><a href="{% url 'users:info' %}">个人中心</a>></li>
+    <li><a href="">我的课程</a></li>
+{% endblock %}
+
+
+{% block right_form %}
+    <div class="right">
+
+        <div class="user_center_my_course">
+            我的课程
+        </div>
+
+        <div class="user_center_my_course_bigbox clearfix">
+            <div style="width: 100%;min-height: 960px;">
+                {% for user_course in user.usercourse_set.all %}
+                    <div class="detail_recommand_box fl"
+                         style="margin: 20px 0px 0 20px;box-shadow: 0 8px 16px 0 rgba(28,31,33,.1);width: 275px;height: 270px;">
+                        <div class="index_new_course_box"
+                             style="height: 100%;width: 100%;margin: 0;padding: 0">
+                            <a href="{% url 'course:detail' user_course.course.id %}"><img
+                                    src="{{ user_course.course.image.url }}"
+                                    alt=""
+                                    id="index_newcourse_img"></a>
+                            <div id="index_new_course_title_box">{{ user_course.course.name }}</div>
+                            <div id="index_new_course_desc_box">{{ user_course.course.get_degree_display }}&nbsp;&nbsp;&nbsp;&nbsp;学习人数:&nbsp;{{ user_course.course.students }}人&nbsp;&nbsp;&nbsp;&nbsp;时长:&nbsp;{{ user_course.course.learn_times }}</div>
+                            <div id="index_new_course_price_box">{% if user_course.course.price == 0 %}免费
+                                {% else %}{{ user_course.course.price }}¥{% endif %}</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+
+    </div>
+{% endblock %}
+

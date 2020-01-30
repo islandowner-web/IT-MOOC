@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}讲师列表页{% endblock %}
+{% block content %}
+
+    <section>
+        <div class="detail_main_head" style="background: url({% static 'images/tealist/tealist2.jpg' %});">
+            <div class="wp">
+                <div class="top_daohang">
+                    <ul>
+                        <li><a href="{% url 'index' %}">首页</a>&nbsp;>&nbsp;</li>
+                        <li><a href="">教师列表</a></li>
+                    </ul>
+                </div>
+                <div class="main_title">
+                    <h1>全部教师</h1>
+                </div>
+                <div class="desc_title">
+                    <h3>教师数:&nbsp;{{ teacher_nums }}人</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wp">
+            <div class="teacherlist_bigbox clearfix">
+                {% for teacher in teachers.object_list %}
+                    <div class="teacher_mainbox clearfix">
+                        <div class="teacher_mainbox_left fl">
+                            <div class="teacher_img"><a href="{% url 'org:teacher_detail' teacher.id %}"><img
+                                    src="{{ teacher.image.url }}" alt=""></a></div>
+                        </div>
+                        <div class="teacher_mainbox_center fl">
+                            <div class="teacher_mainbox_center_box">
+                                <div class="boxone"><span>{{ teacher.name }}</span></div>
+                                <div class="boxtwo clearfix">
+                                    <div class="left fl"><span>工作年限：{{ teacher.work_years }}</span></div>
+                                    <div class="right fl"><span>职位：{{ teacher.work_position }}</span></div>
+                                </div>
+                                <div class="boxthree clearfix">
+                                    <div class="left fl"><span>就职于：<a href="{% url 'org:home' teacher.org.id %}"
+                                                                      style="color: #000;">{{ teacher.org }}</a></span>
+                                    </div>
+                                    <div class="right fl"><span>年龄：{{ teacher.age }}</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teacher_mainbox_right fl">
+                            <div class="entermyurl"><a href="{% url 'org:teacher_detail' teacher.id %}">进入教师主页</a></div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <div class="pageturn">
+        <ul class="pagelist">
+            {% if teachers.has_previous %}
+                <li class="long"><a href="?{{ teachers.previous_page_number.querystring }}">上一页</a></li>
+            {% endif %}
+
+            {% for page in teachers.pages %}
+                {% if page %}
+                    {% ifequal page teachers.number %}
+                        <li class="active"><a href="?{{ page.querystring }}">{{ page }}</a></li>
+                    {% else %}
+                        <li><a href="?{{ page.querystring }}" class="page">{{ page }}</a></li>
+                    {% endifequal %}
+                {% else %}
+                    <li class="none">...</li>
+                {% endif %}
+            {% endfor %}
+            {% if teachers.has_next %}
+                <li class="long"><a href="?{{ teachers.next_page_number.querystring }}">下一页</a></li>
+            {% endif %}
+        </ul>
+    </div>
+
+{% endblock %}
+
+

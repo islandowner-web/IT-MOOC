@@ -1,0 +1,274 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}首页{% endblock %}
+{% block custom_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bannerstyle.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ncss.css' %}">
+{% endblock %}
+{% block content %}
+
+    <!-- banner -->
+    <div class="bannermain" id="main">
+		<div class="menu-box">
+		</div>
+		<!--内容-->
+		<div class="sub-menu hide" id="sub-menu">
+			<div class="inner-box">
+				<div class="sub-inner-box">
+					<div class="title">前端 / 小程序 / JS</div>
+					<div class="sub-row">
+						<span class="bold mr10">基础：</span>
+						<a href="">HTML</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">CSS</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">JavaScript</a>
+					</div>
+					<div class="sub-row">
+						<span class="bold mr10">进阶：</span>
+						<a href="">HTML5</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">CSS3</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">Jquery</a>
+						<span class="ml10 mr10">/</span>
+					</div>
+					<div class="sub-row">
+						<span class="bold mr10">框架：</span>
+						<a href="">VUE</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">React</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">Angular</a>
+					</div>
+				</div>
+			</div>
+			<div class="inner-box">
+				<div class="sub-inner-box">
+					<div class="title">后端 / Java / Python</div>
+					<div class="sub-row">
+                       <span class="bold mr10">Java：</span>
+                       <a href="">JAVA基础</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">SpringCould</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">SSM</a>
+					</div>
+					<div class="sub-row">
+                       <span class="bold mr10">Python：</span>
+                       <a href="">Python基础</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">爬虫</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">Django</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">Flask</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">Tornado</a>
+					</div>
+					<div class="sub-row">
+                       <span class="bold mr10">PHP：</span>
+                       <a href="">PHP基础</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">ThinkPhp</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">Swoole</a>
+					</div>
+				</div>
+			</div>
+			<div class="inner-box">
+				<div class="sub-inner-box">
+					<div class="title">移动 / Android / iOS</div>
+					<div class="sub-row">
+                       <span class="bold mr10">WebApp：</span>
+                       <a href="">WebApp开发</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">尺寸自适应</a>
+					</div>
+					<div class="sub-row">
+                       <span class="bold mr10">Android：</span>
+                       <a href="">Android基础</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">Kotlin</a>
+					</div>
+					<div class="sub-row">
+                       <span class="bold mr10">IOS：</span>
+                       <a href="">Swift</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">Object-c</a>
+					</div>
+				</div>
+			</div>
+			<div class="inner-box">
+				<div class="sub-inner-box">
+					<div class="title">运维 / 测试 / 数据库</div>
+					<div class="sub-row">
+                       <span class="bold mr10">运维：</span>
+                       <a href="">自动化运维</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">运维工具</a>
+					</div>
+					<div class="sub-row">
+                       <span class="bold mr10">测试：</span>
+                       <a href="">功能测试</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">性能测试</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">自动化测试</a>
+					</div>
+					<div class="sub-row">
+                       <span class="bold mr10">数据库：</span>
+                       <a href="">Mysql</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">Oracle</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">Mongodb</a>
+                        <span class="ml10 mr10">/</span>
+                       <a href="">radis</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 菜单 -->
+		<div class="menu-content" id="menu-content">
+			<div class="menu-item">
+				<a href="">
+					<span>前端 / 小程序 / JS</span>
+					<i class="icon">&#xe665;</i>
+				</a>
+			</div>
+			<div class="menu-item">
+				<a href="">
+					<span>后端 / JAVA / Python</span>
+					<i class="icon">&#xe665;</i>
+				</a>
+			</div>
+			<div class="menu-item">
+				<a href="">
+					<span>移动 / Android / iOS</span>
+					<i class="icon">&#xe665;</i>
+				</a>
+			</div>
+			<div class="menu-item">
+				<a href="">
+					<span>运维 / 测试 / 数据库</span>
+					<i class="icon">&#xe665;</i>
+				</a>
+			</div>
+		</div>
+
+		<div class="banner" id="banner">
+			<a href="{{ bannerone.url }}">
+				<div class="banner-slide slide1 slide-active" style="background-image:url({{ bannerone.image.url }});background-size:100% 100%;"></div>
+			</a>
+			<a href="{{ bannertwo.url }}">
+				<div class="banner-slide slide2" style="background-image:url({{ bannertwo.image.url }});background-size:100% 100%;"></div>
+			</a>
+			<a href="{{ bannerthree.url }}">
+				<div class="banner-slide slide3" style="background-image:url({{ bannerthree.image.url }});background-size:100% 100%;"></div>
+			</a>
+		</div>
+		<a href="javascript:void(0)" class="button prev" id="prev"></a>
+		<a href="javascript:void(0)" class="button next" id="next"></a>
+		<div class="dots" id="dots">
+			<span class="active"></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+
+
+
+    <!-- 学习路径 -->
+    <div class="studyway_mainbox" style="background: ;">
+        <div class="wp">
+            <div class="studyway_title">
+                学习路径&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>__________总有一条适合你</span>
+            </div>
+            <div class="studyway_main_detail_box">
+                <div class="line_box clearfix">
+                    <div class="detail_recommand_box fl" style="box-shadow: 0 8px 16px 0 rgba(0,153,153,.4);">
+                        <a href=""><img src="{% static 'images/qdhdcs/QD266.png' %}" alt=""></a>
+                        <div class="detail_recommand_title_box">Vue.js 从入门到精通</div>
+                        <div class="detail_recommand_desc_box">路线专为想学Vue却无从下手的人群设计，以实际项目为例，逐层深入，学透Vue。</div>
+                        <div class="detail_recommand_time_box">5步骤&nbsp;&nbsp;·&nbsp;&nbsp;6门课</div>
+                    </div>
+                    <div class="detail_recommand_box fl" style="box-shadow: 0 8px 16px 0 rgba(155,20,190,.4);">
+                        <a href=""><img src="{% static 'images/qdhdcs/HD266.png' %}" alt=""></a>
+                        <div class="detail_recommand_title_box">Java语言从入门到达人之路</div>
+                        <div class="detail_recommand_desc_box">零基础入门Java，在掌握基础语法后向并发提升，并用Java去构建微服务、上手区块链项目。</div>
+                        <div class="detail_recommand_time_box">5步骤&nbsp;&nbsp;·&nbsp;&nbsp;6门课</div>
+                    </div>
+                </div>
+                <div class="line_box clearfix">
+                    <div class="detail_recommand_box fl" style="box-shadow: 0 8px 16px 0 rgba(137,88,37,.4);">
+                        <a href=""><img src="{% static 'images/qdhdcs/PY266.png' %}" alt=""></a>
+                        <div class="detail_recommand_title_box">Python高薪工程师精进路线</div>
+                        <div class="detail_recommand_desc_box">专为Pythoner进阶高薪定制，从高级语法到主流框架再到源码，系统提升高薪技能。</div>
+                        <div class="detail_recommand_time_box">5步骤&nbsp;&nbsp;·&nbsp;&nbsp;6门课</div>
+                    </div>
+                    <div class="detail_recommand_box fl" style="box-shadow: 0 8px 16px 0 rgba(64,207,157,.4);">
+                        <a href=""><img src="{% static 'images/qdhdcs/AN266.png' %}" alt=""></a>
+                        <div class="detail_recommand_title_box">Android工程师高薪面试突破路线</div>
+                        <div class="detail_recommand_desc_box">路线汇集Android高级工程师面试的关键技能，还原面试官视角，助力面试顺利通关。</div>
+                        <div class="detail_recommand_time_box">5步骤&nbsp;&nbsp;·&nbsp;&nbsp;6门课</div>
+                    </div>
+                </div>
+                <div class="line_box clearfix" style="height:180px;">
+                        <div class="detail_recommand_box fl" style="box-shadow: 0 8px 16px 0 rgba(7,106,140,.4);">
+                            <a href=""><img src="{% static 'images/qdhdcs/SQL266.png' %}" alt=""></a>
+                            <div class="detail_recommand_title_box">MySQL数据库直通车：从入门到面试</div>
+                            <div class="detail_recommand_desc_box">一举吃透最耗时的数据库，学会数据库的基本使用、业务库的设计与架构，面试收尾升华所学。</div>
+                            <div class="detail_recommand_time_box">5步骤&nbsp;&nbsp;·&nbsp;&nbsp;6门课</div>
+                        </div>
+                        <div class="detail_recommand_box fl" style="box-shadow: 0 8px 16px 0 rgba(4,153,178,.4);">
+                            <a href=""><img src="{% static 'images/qdhdcs/CS266.png' %}" alt=""></a>
+                            <div class="detail_recommand_title_box">计算机基础学习路线</div>
+                            <div class="detail_recommand_desc_box">本路线精选程序员必修的数学基础课和计算机基础核心知识，有序打基础职场走更远。</div>
+                            <div class="detail_recommand_time_box">5步骤&nbsp;&nbsp;·&nbsp;&nbsp;6门课</div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 学习路径end -->
+
+    <!-- 新上好课 -->
+      <div class="studyway_mainbox">
+        <div class="wp">
+            <div class="studyway_title">
+                新上好课&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>__________快来看看吧</span>
+            </div>
+            <div class="studyway_main_detail_box" style="height: 580px;overflow: hidden">
+                {% for course in courses %}
+                <div class="detail_recommand_box fl" style="margin: 20px 0px 0 20px;box-shadow: 0 8px 16px 0 rgba(28,31,33,.2);width: 275px;height: 260px;">
+                    <div class="index_new_course_box" style="height: 100%;width: 100%;margin: 0;padding: 0">
+                        <a href="{% url 'course:detail' course.id %}"><img src="{{ course.image.url }}" alt="" id="index_newcourse_img"></a>
+                        <div id="index_new_course_title_box">{{ course.name }}</div>
+                        <div id="index_new_course_desc_box">{{ course.get_degree_display }}&nbsp;&nbsp;&nbsp;&nbsp;学习人数:&nbsp;{{ course.students }}人&nbsp;&nbsp;&nbsp;&nbsp;时长:&nbsp;{{ course.learn_times }}</div>
+                        <div id="index_new_course_price_box">{% if course.price == 0 %}免费{% else %}{{ course.price }}¥{% endif %}</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 150px"></div>
+
+    <!-- 新上好课end -->
+
+
+
+
+
+
+{% endblock %}
+{% block custom_js %}
+    <script src="{% static 'js/jquery/deco-common.js' %}" type='text/javascript'></script>
+    <script type="text/javascript" src="{% static 'js/bannerscript.js' %}"></script>
+{% endblock %}

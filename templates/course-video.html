@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}课程章节{% endblock %}
+{% block custom_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ncss.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="detail_main_head" style="background: url({% static 'images/ndetail/coursevideo.png' %});">
+            <div class="wp">
+                <div class="top_daohang">
+                    <ul>
+                        <li><a href="{% url 'index' %}">首页</a>&nbsp;>&nbsp;</li>
+                        <li><a href="{% url 'course:list' %}">公开课</a>&nbsp;>&nbsp;</li>
+                        <li><a href="{% url 'course:detail' course.id %}">{{ course.name }}</a></li>
+                    </ul>
+                </div>
+                <div class="course_title_bigbox">
+                    <div class="topbox">
+                        <p>{{ course.name }}</p>
+                    </div>
+                    <div class="bottombox clearfix">
+                        <div class="leftbox fl">
+                            <div class="teaheadimg"><img src="{{ course.teacher.image.url }}" alt=""></div>
+                        </div>
+                        <div class="rightbox fl">
+                            <div class="topbox"></div>
+                            <div class="centerbox" style="text-indent: 20px;">
+                                <span>讲师:</span>&nbsp;<span class="normal_font">{{ course.teacher.name }}</span>
+                            </div>
+                            <div class="bottombox" style="text-indent: 20px;">
+                                <span>难度:&nbsp;</span>
+                                <span class="normal_font">{{ course.get_degree_display }}</span>
+                                <i>&nbsp;&nbsp;·&nbsp;&nbsp;</i>
+                                <span>时长:</span>
+                                <span class="normal_font">{{ course.learn_times }}</span>
+                                <i>&nbsp;&nbsp;·&nbsp;&nbsp;</i>
+                                <span>学习人数:</span>
+                                <span class="normal_font">{{ course.students }}</span>
+                                <i>&nbsp;&nbsp;·&nbsp;&nbsp;</i>
+                                <span>点击人数:</span>
+                                <span class="normal_font">{{ course.click_nums }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div style="height: 20px;"></div>
+
+    <div class="course_video_big_box">
+        <div class="wp">
+            <div class="course_video_main_box clearfix">
+
+                <div class="course_video_main_box_left fl">
+                    <div class="course_video_main_box_left_head clearfix" style="margin-bottom: 15px;">
+                        <div class="one fl"><a href="{% url 'course:lesson' course.id %}" class="xhx">课程</a></div>
+                        <div class="two fl"><a href="{% url 'course:comments' course.id %}">评论</a></div>
+                        <div class="course_underline"></div>
+                    </div>
+                    {% for lesson in course.lesson_set.all %}
+                        <div class="course_zhangjie_box">
+                            <div class="course_zhangjie_main_box" style="margin-bottom: 15px;">
+                                <div class="title_box">{{ lesson.name }}</div>
+                                {% for video in lesson.video_set.all %}
+                                    <div class="zhangjie_detail_box"><a
+                                            href="{% url 'course:video' course.id video.id %}">{{ video.name }} &nbsp;&nbsp;({{ video.learn_times }}&nbsp;min)</a>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+
+                <div class="course_video_main_box_right fr">
+                    <div class="course_download_box" style="margin-bottom: 15px;">
+                        <div class="course_download_title_box">资料下载</div>
+                        {% for resource in course_resource %}
+                            <div class="course_download_sm_box"><a href="{{ resource.file.url }}"
+                                                                   style="color: #4d555d;font-size: 14px">·&nbsp;{{ resource.name }}</a>
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="course_download_box" style="margin-bottom: 15px;">
+                        <div class="course_download_title_box">课程作业</div>
+                        {% for homework in course_homework %}
+                            <div class="course_download_sm_box"><a
+                                    href="{% url 'course:homework' course.id homework.id %}"
+                                    style="color: #4d555d;font-size: 14px">·&nbsp;{{ homework.name }}</a></div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 20px;"></div>
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

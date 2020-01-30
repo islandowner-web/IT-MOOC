@@ -1,0 +1,49 @@
+{% extends 'usercenter-base.html' %}
+{% load staticfiles %}
+{% block title %}我的订单{% endblock %}
+{% block custom_bread %}
+    <li><a href="{% url 'index' %}">首页</a>></li>
+    <li><a href="{% url 'users:info' %}">个人中心</a>></li>
+    <li><a href="">我的订单</a></li>
+{% endblock %}
+
+
+{% block right_form %}
+    <div class="right">
+
+        <div class="user_center_my_course">
+            我的订单
+        </div>
+
+        <div style="height: 20px"></div>
+
+        {% for order in orders %}
+            <div class="user_center_my_order_mainbox">
+                <div class="topbox">订单生成时间:&nbsp;<span>{{ order.add_time }}</span></div>
+                <div class="middleline"></div>
+                <div class="bottombox clearfix">
+                    <div class="leftbox fl">
+                        <a href="{% url 'course:detail' order.course.id %}"><img src="{{ order.course.image.url }}"
+                                                                                 alt=""></a>
+                        <div class="title_box">{{ order.course.name }}</div>
+                        <div class="order_numboxone">实付:&nbsp;<span>￥{{ order.course.price }}</span></div>
+                        <div class="order_numboxtwo">订单号:&nbsp;<span>{{ order.order_number }}</span></div>
+                    </div>
+                    <div class="order_middle_line fl"></div>
+                    <div class="rightbox fl">
+                        <div class="msgmain_box">
+                            {% if order.order_status == 1 %}
+                                <div class="topbox">已完成</div>
+                                <div class="bottombox">支付宝支付</div>
+                            {% else %}
+                                <div class="topbox">未支付</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}
+

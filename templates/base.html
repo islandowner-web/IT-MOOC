@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head>
+	<meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+	<title>{% block title %}首页 - 在线教育平台{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reset/reset.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reset/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ncss.css' %}">
+    {% block custom_css %}
+    {% endblock %}
+    <script src="{% static 'js/jquery/jquery.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery/jquery-migrate-1.2.1.min.js' %}" type="text/javascript"></script>
+
+</head>
+
+
+<body>
+
+<div class="all_page_head">
+    <div class="wp">
+        <div class="all_page_head_message clearfix" style="height: 72px;width: 100%;">
+            <a href=""><img src="{% static 'images/logo_11261.png' %}" alt="" style="height: 72px" class="fl"></a>
+            <div class="go_url_box fl" style="height: 72px;width: 300px;">
+                <a href="{% url 'index' %}"><div class="url_div_box fl" style="text-indent: 30px">首页</div></a>
+                <a href="{% url 'course:list' %}"><div class="url_div_box fl">课程</div></a>
+                <a href="{% url 'course:list' %}?sort=price"><div class="url_div_box fl">付费课程</div></a>
+                <a href="{% url 'org:teachers' %}"><div class="url_div_box fl">教师</div></a>
+            </div>
+            <div class="search_text fl">
+                <span class="selectOption" id="jsSelectOption" data-value="{% if s_type %}{{ s_type }}{% else %}course{% endif %}" style="display: none;">
+                                {% if s_type == 'course' %}公开课{% endif %}
+                </span>
+                <input id="search_keywords" class="search_keywords_textarea" type="text" value="{{ keywords }}" placeholder="搜索您想要的课程"/>
+                <div class="search_keywords_btn" id="jsSearchBtn">Search</div>
+            </div>
+            <div class="my_img_course fl">
+                {% if user.is_authenticated %}
+                <div class="if_user_auth">
+                    <div class="fl"><a href="{% url 'users:mycourse' %}"><div class="enter_my_course_center">我的课程</div></a></div>
+                    <div class="user_auth_welcome">欢迎您,{% if user.nick_name %}{{ user.nick_name }}{% else %}{{ user.username }}{% endif %}</div>
+                    <a href="{% url 'logout' %}"><div class="user_quit">Quit</div></a>
+                    <div class="fl"><a href="{% url 'users:info' %}"><img class="if_user_auth_img" src="{{ user.image.url }}" alt=""></a></div>
+                </div>
+                {% else %}
+                <div class="if_user_not_auth">
+                    <div class="fl" style="width: 60px;height: 72px;"></div>
+                    <a href="{% url 'register' %}"><div class="url_div_box_rl fl">注册</div></a>
+                    <a href="{% url 'login' %}"><div class="url_div_box_rl fl">登陆</div></a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% block content %}
+{% endblock %}
+
+{% block footer %}
+<footer>
+    <div class="footer">
+        <div class="wp clear">
+            <span class="pagefooter">2019 在线IT教学平台</span>
+        </div>
+    </div>
+</footer>
+{% endblock %}
+
+
+<script src="{% static 'js/jquery/deco-common.js' %}" type='text/javascript'></script>
+<script src="{% static 'js/plugins/layer/layer.js' %}"></script>
+<script src="{% static 'js/plugins/jquery.scrollLoading.js' %}"  type="text/javascript"></script>
+{% block custom_js %}
+{% endblock %}
+
+
+
+</body>
+</html>

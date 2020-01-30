@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}讲师列表页{% endblock %}
+{% block content %}
+
+    <section>
+        <div class="detail_main_head"
+             style="background: url({% static 'images/ndetail/teacenter.jpg' %})no-repeat center top;">
+            <div class="wp">
+                <div class="top_daohang" style="z-index: 100;">
+                    <ul>
+                        <li><a href="{% url 'index' %}">首页</a>&nbsp;>&nbsp;</li>
+                        <li><a href="{% url 'org:teachers' %}">教师列表</a>&nbsp;>&nbsp;</li>
+                        <li><a href="">教师详情</a></li>
+                    </ul>
+                </div>
+                <div class="teacher_detail_bogbox">
+                    <div class="teacher_detail_main_box clearfix">
+                        <div class="leftbox fl"><img src="{{ teacher.image.url }}" alt=""></div>
+                        <div class="centerbox fl">
+                            <div class="topbox" style="height: 48px;"></div>
+                            <div class="middlebox" style="height: 48px;">
+                                {{ teacher.name }}&nbsp;&nbsp;&nbsp;
+                                <div class="mid_favbtn_tea" id="jsLeftBtn">{% if teacher_fav %}已收藏{% else %}
+                                    收藏{% endif %}</div>
+                            </div>
+                            <div class="bottombox" style="height: 48px;">{% if teacher.gender == 'female' %}女{% else %}
+                                男{% endif %}&nbsp;&nbsp;&nbsp;<a
+                                    href="{% url 'org:home' teacher.org.id %}"
+                                    style="color: #FFFFFF">{{ teacher.org }}</a>&nbsp;&nbsp;&nbsp;{{ teacher.work_position }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="min-height: 800px;">
+        <div class="wp">
+            <div style="height: 20px;"></div>
+            <div class="tea_all_coursess" style="cursor: default;">
+                他的全部课程
+            </div>
+            <div class="org_all_course_detail clearfix">
+                {% for course in teacher.course_set.all %}
+                    <div class="detail_recommand_box fl"
+                         style="margin: 20px 0px 0 20px;box-shadow: 0 8px 16px 0 rgba(28,31,33,.1);width: 275px;height: 270px;left: -15px;bottom: 12px;">
+                        <div class="index_new_course_box"
+                             style="height: 100%;width: 100%;margin: 0;padding: 0">
+                            <a href="{% url 'course:detail' course.id %}"><img
+                                    src="{{ MEDIA_URL }}{{ course.image }}"
+                                    alt=""
+                                    id="index_newcourse_img"></a>
+                            <div id="index_new_course_title_box">{{ course.name }}</div>
+                            <div id="index_new_course_desc_box">{{ course.get_degree_display }}&nbsp;&nbsp;&nbsp;&nbsp;学习人数:&nbsp;{{ course.students }}人&nbsp;&nbsp;&nbsp;&nbsp;时长:&nbsp;{{ course.learn_times }}</div>
+                            <div id="index_new_course_price_box">{% if course.price == 0 %}免费
+                                {% else %}{{ course.price }}¥{% endif %}</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div style="height: 20px;"></div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+{% block custom_js %}
+    <script type="text/javascript">
+        //收藏分享
+        function add_fav(current_elem, fav_id, fav_type) {
+            $.ajax({
+                cache: false,
+                type: "POST",
+                url: "{% url 'op:fav' %}",
+                data: {'fav_id': fav_id, 'fav_type': fav_type},
+                async: true,
+                beforeSend: function (xhr, settings) {
+                    xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+                },
+                success: function (data) {
+                    if (data.status == 'fail') {
+                        if (data.msg == '用户未登录') {
+                            window.location.href = "{% url 'login' %}";
+                        } else {
+                            alert(data.msg)
+                        }
+
+                    } else if (data.status == 'success') {
+                        current_elem.text(data.msg)
+                    }
+                },
+            });
+        }
+
+        $(document).ready(function () {
+            $('#jsLeftBtn').on('click', function () {
+                add_fav($(this), {{ teacher.id }}, 2);
+            });
+        });
+    </script>
+{% endblock %}
+

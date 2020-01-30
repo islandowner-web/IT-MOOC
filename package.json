@@ -1,0 +1,22 @@
+{
+  "name": "it-mooc",
+  "version": "0.0.1",
+  "description": "基于Django2.2开发的IT教育学习平台（视频学习，线上作业，课程推荐，双后台权限分离）",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/islandowner-web/IT-MOOC.git"
+  },
+  "keywords": [
+    "education"
+  ],
+  "author": "https://github.com/islandowner-web",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/islandowner-web/IT-MOOC/issues"
+  },
+  "homepage": "https://github.com/islandowner-web/IT-MOOC#readme"
+}

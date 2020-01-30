@@ -1,0 +1,11 @@
+1. 将djangoueditor源码拷贝到项目根目录下
+2. INSTALLED_APPS 中配置 'DjangoUeditor'
+3. 配置相关的url:
+    url(r'^ueditor/',include('DjangoUeditor.urls')),
+4. 下载ueditor插件并放置到xadmin源码的plugins目录下
+5. 将editor文件名配置到plugins目录下的__init__.py文件的PLUGINS变量中
+6. 在对应的model的管理器中配置：
+    style_fields = {
+        "detail":"ueditor"
+    }
+    detail表示model中富文本的字段

@@ -1,0 +1,2687 @@
+html{overflow: auto; }
+
+/* 公共页面头部end */
+.all_page_head{
+    width: 100%;
+    height: 72px;
+    box-shadow: 0 4px 8px 0 rgba(7, 17, 27, 0.5);
+    background: #fff;
+}
+
+.all_page_head{
+    position: relative;
+}
+
+.url_div_box{
+    height: 72px;
+    width: 70px;
+    /*background: #1abc9c;*/
+    text-align: center;
+    font-size: 16px;
+    line-height: 72px;
+    color: #4D555D;
+}
+
+.url_div_box_rl{
+    height: 72px;
+    width: 60px;
+    /*background: #1abc9c;*/
+    text-align: center;
+    font-size: 16px;
+    line-height: 72px;
+    color: #4D555D;
+}
+
+.url_div_box:hover,
+.url_div_box_rl:hover{
+    color: #000;
+    -webkit-transition: all .5s;
+}
+
+.all_page_head_message .search_text{
+    height: 72px;
+    width: 450px;
+    /*background: red;*/
+    position: relative;
+}
+
+.search_keywords_textarea{
+    height: 36px;
+    width: 300px;
+    margin-top: 16px;
+    margin-left: 30px;
+    border-radius: 5px;
+    /*transition: background-color 0.3s;*/
+    /*background-color: transparent;*/
+    background: #f1f1f1;
+    color: #A6A6A6;
+}
+
+.search_keywords_btn{
+    height: 36px;
+    width: 80px;
+    /*background: aqua;*/
+    box-shadow: 0 8px 16px 0 rgba(28,31,33,.1);
+    display: inline-block;
+    position: absolute;
+    left: 345px;
+    top: 50%;
+    margin-top: -20px;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 36px;
+    text-align: center;
+    font-size: 14px;
+    color: #4D555D;
+
+}
+
+.search_keywords_btn:hover{
+    color: #000000;
+    -webkit-transition: all .5s;
+}
+
+.my_img_course{
+    width: 186px;
+    height: 72px;
+    /*background: #01a469;*/
+    position: relative;
+}
+
+.enter_my_course_center{
+    height: 72px;
+    width: 140px;
+    font-size: 14px;
+    text-align: center;
+    color: #4D555D;
+    line-height: 72px;
+    /*background: pink;*/
+    text-indent: 60px;
+}
+
+.if_user_auth_img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    margin-top: 15px;
+}
+
+/*.if_user_auth_detailbox{*/
+/*    position: absolute;*/
+/*    width: 200px;*/
+/*    height: 300px;*/
+/*    background: red;*/
+/*    top:72px;*/
+/*    right: 0;*/
+/*    z-index: 100;*/
+/*    border-radius: 10px;*/
+/*    overflow: hidden;*/
+/*}*/
+
+.user_auth_welcome{
+    position: absolute;
+    /*background: #00a0dc;*/
+    width: 130px;
+    height: 20px;
+    text-align: right;
+    bottom: 0;
+    left: 0;
+    color: #4D555D;
+}
+
+.user_quit{
+    position: absolute;
+    /*background: #eea236;*/
+    width: 130px;
+    height: 20px;
+    text-align: right;
+    left: 0;
+    top: 5px;
+    color: #ccc;
+}
+
+.if_user_not_auth .login_in{
+    height: 30px;
+    width: 80px;
+    /*background: darkgrey;*/
+    line-height: 30px;
+    text-align: center;
+}
+/* 公共页面头部end */
+
+
+
+
+/* 学习路径 */
+.studyway_mainbox{
+    width: 100%;
+    height: 590px;
+    /* background: aqua; */
+}
+
+.studyway_title{
+    width: 100%;
+    height: 60px;
+    /* background: pink; */
+    font-size: 24px;
+    line-height: 60px;
+    font-weight: bold;
+}
+
+.studyway_title span{
+    color: #ccc;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.studyway_main_detail_box{
+    width: 100%;
+    height: 500px;
+    /* background: azure; */
+}
+
+.studyway_main_detail_box .line_box{
+    height: 160px;
+    width: 100%;
+    /* background: blanchedalmond; */
+
+}
+
+.line_box div{
+    height: 140px;
+    width:570px;
+    margin: 20px 0px 0 20px;
+    /* background: cadetblue; */
+}
+
+.detail_recommand_box{
+    position: relative;
+    border-radius: 18px;
+    box-shadow: 0 8px 16px 0 rgba(28,31,33,.3);
+    /*margin-bottom: 20px;*/
+}
+
+.line_box .detail_recommand_box img{
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    box-shadow: 0 8px 16px 0 rgba(28,31,33, .2);
+    border-radius: 15px;
+}
+
+.detail_recommand_box .detail_recommand_title_box{
+    height: 35px;
+    width: 400px;
+    /* background: white; */
+    position: absolute;
+    top: -5px;
+    left: 125px;
+    z-index: 3;
+    line-height: 35px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.detail_recommand_box .detail_recommand_desc_box{
+    height: 55px;
+    width: 400px;
+    /* background: white; */
+    position: absolute;
+    top: 35px;
+    left: 125px;
+    z-index: 3;
+    line-height: 20px;
+    color: #545C63;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.detail_recommand_box .detail_recommand_time_box{
+    height: 15px;
+    width: 400px;
+    /* background: white; */
+    position: absolute;
+    top: 90px;
+    left: 125px;
+    font-size: 12px;
+    color: #9199A1;
+    line-height: 15px;
+}
+/* 学习路径end */
+
+/*首页-新上好课*/
+#index_newcourse_img{
+    width: 260px;!important;
+    height: 150px;!important;
+    top: 5px;
+    left: 7px;
+    border-radius: 15px;
+    position: absolute;
+}
+
+#index_new_course_title_box {
+    width: 254px;
+    height: 46px;
+    display: block;
+    /*background: red;*/
+    z-index: 20;
+    z-index: 20;
+    top: 160px;
+    position: absolute;
+    right: 10px;
+    text-align: left;
+    line-height: 23px;
+    font-size: 16px;
+    color:#07111B;
+}
+
+#index_new_course_title_box:hover {
+    text-decoration: none;
+    width: 254px;
+    height: 46px;
+    display: block;
+    /*background: red;*/
+    z-index: 20;
+    top: 160px;
+    position: absolute;
+    right: 10px;
+    text-align: left;
+    line-height: 23px;
+    font-size: 16px;
+    color:red;
+    cursor: pointer;
+    -webkit-transition: all .5s;
+}
+
+#index_new_course_desc_box{
+    width: 254px;
+    height: 18px;
+    display: block;
+    /*background: gray;*/
+    z-index: 20;
+    top: 210px;
+    position: absolute;
+    right: 10px;
+    text-align: left;
+    line-height: 18px;
+    font-size: 12px;
+    color: #9199A1;
+    line-height: 18px;
+}
+
+#index_new_course_price_box{
+    color: #F01414 !important;
+    font-weight: bold;
+    font-size: 12px;
+    width: 254px;
+    height: 18px;
+    display: block;
+    /*background: gray;*/
+    z-index: 20;
+    top: 230px;
+    position: absolute;
+    right: 10px;
+    text-align: left;
+    line-height: 18px;
+}
+
+/*首页-新上好课end*/
+
+
+/* 改课程列表 */
+.list .group_list .box{
+    /* background: pink; */
+    position: relative;
+}
+
+.list .group_list .ndetial{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 115px;
+    width: 262px;
+    /* background: green;    */
+}
+
+/* .list .group_list .ndetial div{
+    height: 33px;
+    width: 100%;
+} */
+
+.list .group_list .ndetial .none{
+    /* background: blue; */
+    height: 28px;
+    width: 100%;
+}
+
+.list .group_list .ndetial .ntwo{
+    /* background: greenyellow; */
+    height: 28px;
+    width: 100%;
+}
+
+.list .group_list .ndetial .nthree{
+    /* background: greenyellow; */
+    height: 59px;
+    width: 100%;
+}
+
+.list .group_list .ndetial .nthree{
+    /* background: yellow; */
+}
+
+.list .group_list .ndetial div .ntextone{
+    width: 50%;
+    height: 100%;
+    /* background: saddlebrown; */
+    line-height: 28px;
+    text-indent: 10px;
+    font-size: 13px;
+    color: #4B4B4B;
+}
+
+.list .group_list .ndetial div .ntexttwo{
+    width: 50%;
+    height: 100%;
+    /* background: wheat; */
+    line-height: 28px;
+    font-size: 13px;
+    color: #4B4B4B;
+}
+
+.list .group_list .ndetial .ntextdesc{
+    padding-left: 10px;
+    line-height: 18px;
+    overflow: hidden;
+    color: #4B4B4B;
+}
+/* 改课程列表end */
+
+
+
+/* 课程列表 右 热门课程推荐*/
+.group_recommend .recommendbox{
+    height: 220px;
+    width: 100%;
+    margin-top: 30px;
+    /*background: pink;*/
+}
+
+.group_recommend .recommendbox img{
+    height: 177px;
+    width: 100%;
+}
+
+.group_recommend .recommendbox .coursename h2{
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #434343;
+    text-indent: 10px;
+}
+
+/* 课程列表 右 热门课程推荐 end */
+
+/* -------------------------------课程详情页------------------------------- */
+
+body{overflow:hidden}
+
+/* 导航条 */
+.detail_main_head .top_daohang{
+    color:#DDDDDD;
+    height: 25px;
+    width: 400px;
+    /* background: #f01414; */
+    font-size: 12px;
+    position: absolute;
+    top: 15px;
+}
+
+.detail_main_head .top_daohang ul{
+
+    text-decoration: none;
+
+}
+
+.detail_main_head .top_daohang ul li{
+    float: left;
+    line-height: 25px;
+}
+
+.detail_main_head .top_daohang ul li a{
+    text-decoration: none;
+    color:#fff;
+
+}
+
+
+/* 导航条 */
+
+/* 课程详情页头图片 */
+.detail_main_head{
+    width: 100%;
+    height: 300px;
+    background-image: url(../images/ndetail/headerpne.png);
+    position: relative;
+}
+
+.detail_main_head .main_title{
+    width: 1000px;
+    height: 48px;
+    margin: 0 auto;
+    /* background: pink; */
+    padding-top: 90px;
+}
+
+
+.detail_main_head .main_title h1{
+    font-size: 40px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(28,31,33,.6);
+}
+
+.detail_main_head .desc_title{
+    width: 1000px;
+    height: 18px;
+    margin: 0 auto;
+    /* background: green; */
+    padding-top: 15px;
+}
+
+.detail_main_head .desc_title h3{
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(28,31,33,.6);
+}
+/* 课程详情页头图片end */
+
+
+/* 信息悬浮窗 */
+.fixed-wrap{
+    width: 1200px;
+    height: 130px;
+    background: #ffffff;
+    position: relative;
+    top: -65px;
+    border-radius: 18px;
+    margin: 0 auto;
+    box-shadow: 0 8px 16px 0 rgba(28,31,33,.1);
+    background: url(../images/ndetail/fixed_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.warpbox{
+    height: 90px;
+    width: 1080px;
+    /* background: #abcdef; */
+    margin: 0 auto;
+    position: absolute;
+    top: 20px;
+    left: 60px;
+}
+
+.warpbox_left{
+    height: 90px;
+    width: 680px;
+    /* background: burlywood; */
+}
+
+.warpbox_right{
+    height: 90px;
+    width: 400px;
+    /* background: chartreuse; */
+}
+
+.warpbox_right .seeorbuy a{
+    /*text-decoration: none;*/
+    color: #fff;
+    /*cursor: pointer;*/
+}
+
+.warpbox_left_top{
+    height: 55px;
+    width: 100%;
+    /* background: chocolate; */
+    position: relative;
+}
+
+.warpbox_left_bottom{
+    height: 35px;
+    width: 100%;
+    /* background: red; */
+}
+
+.pricetext{
+    font-size: 32px;
+    color: #f01414;
+    line-height: 32px;
+    font-weight: bold;
+    /* padding-top: 12px; */
+    text-indent: 12px;
+    height: 55px;
+    width: 140px;
+    /* background: white; */
+}
+
+.pricetext span{
+    display: block;
+    padding-top: 12px;
+}
+
+.fav_btn{
+    height: 25px;
+    width: 100px;
+    /*background: orange;*/
+    background-image: linear-gradient(90deg,#025864 0,#15a992 100%);
+    box-shadow: 0 8px 16px 0 rgba(28,31,33,.1);
+    position: absolute;
+    top: 15px;
+    left: 160px;
+    border-radius: 7px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 25px;
+    font-size: 15px;
+    color: #FFF;
+}
+
+
+
+.warpbox_left_bottom span{
+    line-height: 35px;
+    font-size: 12px;
+    color: #545c63;
+    font-weight: 700;
+}
+.warpbox_left_bottom .normal_font{
+    color: #545c63;
+    font-weight: normal;
+}
+
+.warpbox_right .seeorbuy{
+    height: 60px;
+    width: 200px;
+    background:red;
+    position: absolute;
+    top: 15px;
+    right: 100px;
+    border-radius: 26px;
+}
+
+.warpbox_right .seeorbuy span{
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* 信息悬浮窗end */
+
+/* 介绍和教师 */
+
+.teadesc_main_big_box{
+    width: 100%;
+    height: 440px;
+    position: relative;
+}
+
+.teadesc_main_box{
+    width: 100%;
+    height: 100%;
+    background: url(../images/ndetail/colortea.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: -33px;
+    border-radius: 18px;
+}
+
+.teadesc_left{
+    width: 64%;
+    height: 100%;
+    /* background: blueviolet; */
+    position: relative;
+}
+
+.teadesc_right{
+    width: 35%;
+    height: 100%;
+    /* background: red; */
+    position: relative;
+}
+
+.teadesc_left_textarea{
+    height: 300px;
+    width: 600px;
+    /* background: #abcdef; */
+    position: absolute;
+    top: 70px;
+    left: 105px;
+}
+
+.teadesc_left_textarea .top_text{
+    height: 70px;
+    width: 100%;
+    /* background: pink; */
+}
+
+.teadesc_left_textarea .top_text span{
+    line-height: 70px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.teadesc_left_textarea .bottom_text span{
+    text-align: left;
+    font-size: 17px;
+    line-height: 28px;
+    color: #fff;
+}
+
+.teadesc_main_box .textline{
+    height: 80%;
+    width: 1px;
+    /* background: black; */
+    border-left: 2px dashed #fff;
+    position: absolute;
+    top: 50px;
+    left: 769px;
+    z-index: 2;
+}
+
+.teadesc_right .tea_header_img{
+    height: 135px;
+    width: 135px;
+    /* background: brown; */
+    position: absolute;
+    left: 140px;
+    top: 75px;
+    border-radius: 50%;
+    border: #fff 3px solid;
+    overflow: hidden;
+}
+
+.teadesc_right .tea_name{
+    height: 30px;
+    width: 160px;
+    color: #fff;
+    line-height: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    /* background: chartreuse; */
+    position: absolute;
+    top: 230px;
+    left: 50%;
+    margin-left: -80px;
+    text-align: center;
+}
+
+.teadesc_right .tea_desc{
+    height: 22px;
+    width: 220px;
+    color: #fff;
+    line-height: 22px;
+    font-size: 14px;
+    position: absolute;
+    top: 275px;
+    left: 50%;
+    margin-left: -110px;
+    text-align: center;
+}
+
+.teadesc_right .tea_org_name a{
+    height: 22px;
+    width: 220px;
+    color: #fff;
+    line-height: 22px;
+    font-size: 14px;
+    position: absolute;
+    top: 310px;
+    left: 50%;
+    margin-left: -110px;
+    text-align: center;
+    text-decoration: none;
+}
+/* 介绍和教师end */
+
+
+/* 课程详情/课程推荐 */
+.clear_course_detail{
+    overflow: hidden;
+    margin-bottom: 35px;
+}
+
+.course_detail_bigbox{
+    width: 68%;
+    /* height: 1000px; */
+    /* background: crimson; */
+    margin-right: 24px;
+
+}
+
+.course_detail_title{
+    width: 96%;
+    /*height: px;*/
+    background: aqua;
+    box-shadow: 0 8px 16px 0 rgba(28,31,33, .4);
+    background: url(../images/ndetail/fixed_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    margin: 0 auto;
+    text-indent: 20px;
+}
+
+.course_detail_mainbox{
+    width: 100%;
+    /* height: 910px; */
+    /* background: green; */
+    margin-top: 30px;
+    border-top: 2px #DDDDDD dashed;
+    border-bottom: 2px #DDDDDD dashed;
+    overflow: hidden;
+}
+
+.course_detail_title span,
+.course_recommend_title span{
+    line-height: 60px;
+    font-size: 20px;
+}
+
+.course_recommend_bigbox{
+    width: 30%;
+    /* height: 1000px; */
+    /* background: yellow; */
+}
+
+.course_recommend_title{
+    width: 100%;
+    height: 60px;
+    /* background: seagreen; */
+    box-shadow: 0 8px 16px 0 rgba(28,31,33, .4);
+    background: url(../images/ndetail/fixed_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    margin: 0 auto;
+    text-indent: 20px;
+}
+
+.course_recommend_mainbox{
+    width: 100%;
+    /* height: 910px; */
+    /* background: green; */
+    margin-top: 30px;
+    /*border-top: 1px #DDDDDD dashed;*/
+    /*border-bottom: 1px #DDDDDD dashed;*/
+}
+
+.course_recommend_box{
+    width: 90%;
+    height: 240px;
+    /* background: greenyellow; */
+    margin: 0 auto;
+    /*border-top: 2px #DDDDDD dashed;*/
+    border-bottom: 2px #DDDDDD dashed;
+    margin-bottom: 15px;
+}
+
+.course_recommend_boximg{
+    width: 100%;
+    height: 190px;
+    border-radius: 15px;
+}
+
+.course_recommend_name{
+    width: 100%;
+    height: 50px;
+    /* background: red; */
+}
+
+.course_recommend_name h2{
+    font-size: 20px;
+    text-indent: 15px;
+    line-height: 50px;
+}
+
+
+/* 课程详情/课程推荐 end */
+
+/* 页脚异常 */
+.extra_footer_text{
+    /*background: red;*/
+    width: 100%;
+    height: 20px;
+    /*position: absolute;*/
+    bottom: 1px;
+    position: relative;
+}
+
+.extra_footer_text .foottext{
+    color: #717171;
+    font-size: 14px;
+    line-height: 20px;
+    position: absolute;
+    left: 50%;
+    margin-left: -73px;
+    top: 47px;
+}
+/* 页脚异常end */
+
+/* -------------------------------课程详情页end------------------------------- */
+
+
+/* -------------------------------讲师列表------------------------------- */
+
+.teacherlist_bigbox{
+    width: 100%;
+    height: 1150px;
+    /* background: pink; */
+    overflow: hidden; /* 解决子盒子定位 */
+}
+
+.teacher_mainbox{
+    width: 98%;
+    height: 200px;
+    /* background: greenyellow; */
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+    box-shadow: 0 8px 16px 0 rgba(28,31,33, .2);
+    background: url(../images/ndetail/fixed_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.teacher_mainbox_left{
+    width: 25%;
+    height: 100%;
+    /* background: grey; */
+}
+
+.teacher_mainbox_left .teacher_img img{
+    height: 144px;
+    width: 144px;
+    border-radius: 50%;
+    /* background: honeydew; */
+    position: absolute;
+    display: block;
+    left: 90px;
+    top: 50%;
+    margin-top: -72px;
+    border: 2px #ccc solid;
+}
+
+.teacher_mainbox_center{
+    width: 45%;
+    height: 100%;
+    /* background: #abcdef; */
+}
+
+.teacher_mainbox_center_box{
+    width: 100%;
+    height: 160px;
+    /* background: palegreen; */
+    margin-top: 20px;
+}
+
+.teacher_mainbox_center_box .boxone{
+    height: 33.3%;
+    width: 100%;
+    /* background: paleturquoise; */
+}
+
+.teacher_mainbox_center_box .boxone span{
+    display: block;
+    line-height: 53px;
+    height: 53px;
+    font-weight: 700;
+    font-size: 20px;
+    text-indent: 20px;
+    text-shadow: 0 2px 4px rgba(28,31,33,.2);
+}
+
+.teacher_mainbox_center_box .boxtwo{
+    height: 33.3%;
+    width: 100%;
+    /* background: papayawhip; */
+}
+
+.teacher_mainbox_center_box .boxtwo span,
+.teacher_mainbox_center_box .boxthree span{
+    display: block;
+    line-height: 53px;
+    height: 53px;
+    font-weight: normal;
+    font-size: 14px;
+    text-indent: 20px;
+}
+
+/* .teacher_mainbox_center_box .boxtwo .gray,
+.teacher_mainbox_center_box .boxthree .gray{
+    color: #848484;
+}; */
+
+
+.teacher_mainbox_center_box .boxtwo .left{
+    width: 50%;
+    height: 100%;
+    /* background: red; */
+}
+
+.teacher_mainbox_center_box .boxtwo .right{
+    width: 50%;
+    height: 100%;
+    /* background: pink; */
+}
+
+.teacher_mainbox_center_box .boxthree .left{
+    width: 50%;
+    height: 100%;
+    /* background: teal; */
+}
+
+.teacher_mainbox_center_box .boxthree .right{
+    width: 50%;
+    height: 100%;
+    /* background: grey; */
+}
+
+.teacher_mainbox_center_box .boxthree{
+    height: 33.3%;
+    width: 100%;
+    /* background: purple; */
+}
+
+.teacher_mainbox_right{
+    width: 30%;
+    height: 100%;
+    /* background: #abcdef; */
+}
+
+.teacher_mainbox_right .entermyurl{
+    width: 260px;
+    height: 50px;
+    /* background: pink; */
+    margin: 0 auto;
+    margin-top: 75px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    border: 1px #ccc solid;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(28,31,33, .4);
+}
+
+.teacher_mainbox_right .entermyurl a{
+    text-decoration: none;
+    color: #000;
+}
+
+.teacher_empty_box{
+    width: 100%;
+    height: 20px;
+    background: red;
+    padding-top: 15px;
+}
+/* -------------------------------讲师列表end------------------------------- */
+
+
+
+/* -------------------------------课程详情目录页------------------------------- */
+.course_title_bigbox{
+    width: 1100px;
+    height: 160px;
+    /* background: pink; */
+    position: absolute;
+    top: 80px;
+}
+
+.course_title_bigbox .topbox{
+    width: 100%;
+    height: 70px;
+    /* background: powderblue; */
+}
+
+.course_title_bigbox .topbox p{
+    display: block;
+    line-height: 70px;
+    color: #fff;
+    font-size: 40px;
+    text-shadow: 0 2px 4px rgba(28,31,33,.6);
+}
+
+.course_title_bigbox .bottombox{
+    width: 100%;
+    height: 90px;
+    /* background: palegoldenrod; */
+}
+
+.course_title_bigbox .bottombox .leftbox{
+    width: 90px;
+    height: 90px;
+    /* background: pink; */
+    position: relative;
+}
+
+.course_title_bigbox .bottombox .leftbox .teaheadimg img{
+    width: 72px;
+    height: 72px;
+    background: white;
+    position: absolute;
+    top: 24px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+}
+
+.course_title_bigbox .bottombox .rightbox .topbox{
+    width: 710px;
+    height: 30px;
+    /* background: red; */
+}
+
+.course_title_bigbox .bottombox .rightbox .centerbox{
+    width: 710px;
+    height: 30px;
+    /* background: powderblue; */
+}
+.course_title_bigbox .bottombox .rightbox .bottombox{
+    width: 710px;
+    height: 30px;
+    /* background: greenyellow; */
+}
+
+.course_title_bigbox .bottombox .rightbox span{
+    line-height: 35px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(28,31,33,.6);
+}
+
+.course_title_bigbox .bottombox .rightbox .normal_font{
+    color: #fff;
+    font-weight: normal;
+    text-shadow: 0 2px 4px rgba(28,31,33,.6);
+}
+
+.chose_style_comment{
+    height: 50px;
+    width: 100%;
+}
+
+.course_video_main_box{
+    /*height: 2000px;*/
+    /* background: #abcdef; */
+
+}
+
+.course_video_main_box_left{
+    width: 850px;
+    height: 100%;
+    /* background: pink; */
+}
+
+
+
+.course_video_main_box_left_head{
+    height:60px;
+    width: 100%;
+    /* background: #ddd; */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(7,17,27,.2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.course_video_main_box_left_head .course_underline{
+    height: 2px;
+    width: 50px;
+    background: red;
+    position: absolute;
+    left: 51px;
+    top: 50px;
+}
+
+.course_video_main_box_left_head .comment_underline{
+    height: 2px;
+    width: 50px;
+    background: red;
+    position: absolute;
+    left: 200px;
+    top: 50px;
+}
+
+.course_video_main_box_left_head .one{
+    height: 60px;
+    width: 150px;
+    /* background: teal; */
+}
+
+.course_video_main_box_left_head .two{
+    height: 60px;
+    width: 150px;
+    /* background: violet; */
+}
+
+.course_video_main_box_left_head .one a,
+.course_video_main_box_left_head .two a{
+    text-decoration: none;
+    color: #000;
+    line-height: 60px;
+    text-align: center;
+    font-size: 20px;
+    display: block;
+}
+
+.xhx{
+    color: red !important;
+}
+
+/* ----------------------------------------------------------------------------------------------------课程评论 */
+.course_comment_maintextbox{
+    height: 200px;
+    width: 100%;
+    background: pink;
+    background: url(../../images/ndetail/fixed_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px 0 rgba(28,31,33,.3);
+    position: relative;
+}
+
+#js-pl-textarea{
+    top: 10px;
+    height: 130px;
+    width: 100%;
+    position: absolute;
+    border-bottom: 1px solid #ccc;
+
+}
+
+#js-pl-submit{
+    height: 40px;
+    width: 150px;
+    background: rgb(21, 216, 86);
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 16px;
+}
+
+#js-pl-submit:hover{
+    height: 40px;
+    width: 150px;
+    background: rgb(235, 217, 59);
+    cursor: pointer;
+    color: #fff;
+
+}
+
+.course_comment_maincommentbox{
+    width: 100%;
+    height: 180px;
+    /* background: greenyellow; */
+    margin-top: 20px;
+    box-shadow: 0 8px 16px 0 rgba(28,31,33,.3);
+    margin-bottom: 15px;
+    background: url(../../images/ndetail/fixed_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+
+.course_comment_maincommentbox .left{
+    height: 100%;
+    width: 150px;
+    /* background: greenyellow; */
+    position: relative;
+}
+
+.course_comment_maincommentbox .left img{
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 2px #ccc solid;
+    position: absolute;
+    left: 50px;
+    top: 10px;
+}
+
+.course_comment_maincommentbox .right{
+    height: 100%;
+    max-width: 650px;
+    /* background: #abcdef; */
+}
+
+.course_comment_maincommentbox .right .top{
+    height: 50px;
+    /* background: pink; */
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.course_comment_maincommentbox .right .center{
+    height: 100px;
+    /* min-height: 50px; */
+    /* background: palevioletred; */
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.course_comment_maincommentbox .right .bottom{
+    height: 30px;
+    /* background: purple; */
+    font-size: 12px;
+    line-height: 30px;
+    text-align: left;
+    font-weight: 400;
+    color: #93999f;
+}
+
+/* ----------------------------------------------------------------------------------------------------课程评论end */
+
+.course_desc_box{
+    width: 100%;
+    /* height: 180px; */
+    border-radius: 20px;
+    box-shadow: 0 8px 16px 0 rgba(28,31,33, .4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background: #fff;
+    position: relative;
+}
+
+.course_desc_main_box{
+    width: 800px;
+    /* height: 160px; */
+    /* position: absolute; */
+    /* background: red; */
+    margin: 0 auto;
+
+}
+
+.course_desc_main_box span{
+    font-size: 18px;
+
+}
+
+.course_zhangjie_box{
+    width: 100%;
+    /* height: 280px; */
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    box-shadow: 0 2px 4px 0 rgba(7,17,27,.2);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background: #fff;
+}
+
+.course_zhangjie_main_box{
+    width: 800px;
+    /* height: 270px; */
+    /*background: pink;*/
+    margin: 0 auto;
+}
+
+.course_zhangjie_main_box .title_box{
+    height: 60px;
+    /*background: #ccc;*/
+    line-height: 60px;
+    font-size: 16px;
+}
+
+.course_zhangjie_main_box .zhangjie_detail_box{
+    height: 50px;
+    /*background: teal;*/
+    line-height: 50px;
+    font-size: 14px;
+    color: #93999f;
+    text-indent: 30px;
+}
+
+.course_zhangjie_main_box .zhangjie_detail_box a{
+    text-decoration: none;
+    color: #000;
+    color: #4d555d;
+}
+
+.course_video_main_box_right{
+    width: 300px;
+    height: 100%;
+    /* background: greenyellow; */
+}
+
+.course_download_box{
+    width: 100%;
+    /* height: 280px; */
+    background: #fff;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    box-shadow: 0 2px 4px 0 rgba(7,17,27,.2);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.course_download_title_box{
+    width: 100%;
+    height: 40px;
+    /* background: pink; */
+    line-height: 40px;
+    font-size: 17px;
+    text-indent: 25px;
+    padding-top: 10px;
+}
+
+
+.course_download_sm_box{
+    width: 100%;
+    height: 30px;
+    /* background: skyblue; */
+    line-height: 30px;
+    font-size: 20px;
+    text-indent: 25px;
+    color: #4d555d;
+}
+
+.course_download_sm_box a,
+.course_download_sm_box span{
+    color: #4d555d;
+    font-size: 16px;
+}
+
+.students_learn_more{
+    width: 100%;
+    height: 700px;
+    background: #fff;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    box-shadow: 0 2px 4px 0 rgba(7,17,27,.2);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.students_learn_more_mainbox{
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px 0 rgba(28,31,33, .4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background: #abcdef; */
+}
+
+.students_learn_more_mainbox .img{
+    width: 100%;
+    height: 190px;
+    border-radius: 20px;
+    background: red;
+}
+
+.students_learn_more_mainbox .img img{
+    width: 100%;
+    height: 190px;
+    border-radius: 20px;
+}
+
+.students_learn_more_mainbox .recommandtext{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-indent: 25px;
+    font-size: 17px;
+}
+
+.students_learn_more .also_learn{
+    width: 100%;
+    height: 50px;
+    background: #ccc;
+    line-height: 50px;
+    font-size: 18px;
+    text-indent: 25px;
+}
+
+/* -------------------------------课程详情目录页end------------------------------- */
+
+
+/* -------------------------------教师详情页------------------------------- */
+.teacher_detail_bogbox{
+    height: 290px;
+    width: 1200px;
+    /* background: pink; */
+    position: relative;
+}
+
+.teacher_detail_main_box{
+    height: 144px;
+    width: 1200px;
+    /* background: greenyellow; */
+    position: absolute;
+    bottom: 0;
+}
+
+.teacher_detail_main_box .leftbox{
+    height: 144px;
+    width: 144px;
+    /* background: red; */
+}
+
+.teacher_detail_main_box .leftbox img{
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    border: #ddd solid 2px;
+}
+
+.teacher_detail_main_box .centerbox{
+    height: 144px;
+    width: 500px;
+    /* background: pink; */
+    position: relative;
+}
+
+.teacher_detail_main_box .centerbox .middlebox{
+    /* background: indianred; */
+    line-height: 48px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    text-indent: 25px;
+    text-shadow: 0 2px 4px rgba(28,31,33,.6);
+    position: relative;
+}
+
+
+
+.teacher_detail_main_box .centerbox .middlebox .mid_favbtn_tea{
+    position: absolute;
+    width: 90px;
+    height: 24px;
+    background-image: linear-gradient(90deg,#6c61d3 0,#53a0fd 100%);
+    font-size: 13px;
+    left: 110px;
+    line-height: 24px;
+    text-align: center;
+    text-indent: 0;
+    border-radius: 5px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.teacher_detail_main_box .centerbox .add_bottombox{
+    /*background: red;*/
+    width: 200px;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    left: 25px;
+    bottom: 28px;
+    color: #FFF;
+    text-shadow: 0 2px 4px rgba(28,31,33,.2);
+}
+
+.teacher_detail_main_box .centerbox .bottombox{
+    /* background: green; */
+    line-height: 48px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    text-indent: 25px;
+    text-shadow: 0 2px 4px rgba(28,31,33,.6);
+}
+
+.teacher_detail_main_box .rightbox{
+    height: 144px;
+    width: 556px;
+    /* background: gray; */
+}
+
+.teacher_detail_main_box .rightbox .middlebox{
+    /* background: yellow; */
+}
+
+.teacher_detail_main_box .rightbox .middlebox .leftbox{
+    /* background: yellowgreen; */
+    line-height: 48px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-indent: 140px;
+    text-shadow: 0 2px 4px rgba(28,31,33,.6);
+}
+
+.teacher_detail_main_box .rightbox .middlebox .rightbox{
+    /* background: skyblue; */
+    position: relative;
+
+}
+
+.teacher_detail_main_box .rightbox .middlebox .rightbox .favbtn_tea{
+    height: 20px;
+    width: 80px;
+    background: red;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline;
+    /*box-shadow: 0 8px 16px 0 rgba(28,31,33,.3);*/
+}
+
+.tea_all_coursess{
+    height: 50px;
+    width: 100%;
+    /* background: chartreuse; */
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(28,31,33,.3);
+    background: url(../../images/ndetail/fixed_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+}
+
+.tea_all_course_list_box{
+    height: 200px;
+    width: 100%;
+    /* background: chartreuse; */
+    border-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(28,31,33,.3);
+    margin-bottom: 15px;
+    background: url(../../images/ndetail/fixed_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.tea_all_course_list_box .leftbox{
+    height: 100%;
+    width: 350px;
+    position: relative;
+}
+
+.tea_all_course_list_box .leftbox img{
+    height: 190px;
+    border-radius: 25px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.tea_all_course_list_box .centerbox{
+    width: 500px;
+    height: 200px;
+}
+
+.tea_all_course_list_box .centerbox .topbox{
+    width: 100%;
+    height: 66px;
+}
+
+.tea_all_course_list_box .centerbox .topbox .leftbox{
+    width: 50%;
+    height: 100%;
+}
+
+.tea_all_course_list_box .centerbox .topbox .rightbox{
+    width: 50%;
+    height: 100%;
+}
+
+.tea_all_course_list_box .centerbox .middlebox .leftbox{
+    width: 50%;
+    height: 100%;
+}
+
+.tea_all_course_list_box .centerbox .middlebox .rightbox{
+    width: 50%;
+    height: 100%;
+}
+
+.tea_all_course_list_box .centerbox .middlebox{
+    width: 100%;
+    height: 67px;
+}
+
+.tea_all_course_list_box .centerbox .bottombox{
+    width: 100%;
+    height: 67px;
+}
+
+.tea_all_course_list_box .centerbox{
+    text-indent: 10px;
+    display: block;
+    text-align: left;
+    line-height: 66px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #4B4B4B;
+}
+
+.tea_all_course_list_box .centerbox span{
+    color: #000;
+}
+
+.tea_all_course_list_box .rightbox{
+    position: relative;
+}
+
+.tea_all_course_list_box .rightbox .enter_class_btn{
+    position: absolute;
+    height: 66px;
+    width: 330px;
+    top: 66px;
+    left: 9px;
+    border-radius: 33px;
+    background: url(../../images/ndetail/fixed_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 16px 0 rgba(28,31,33,.3);
+    line-height: 66px;
+}
+
+.tea_all_course_list_box .rightbox .enter_class_btn a{
+    color: red;
+}
+/* -------------------------------教师详情页end------------------------------- 340 200*/
+
+
+/* -------------------------------机构详情页------------------------------- */
+.org_all_course_title_use{
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.org_all_course_title{
+    width: 150px;
+    height: 50px;
+    background: pink;
+    line-height: 50px;
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    box-shadow: 0 4px 8px 0 rgba(28,31,33,.2);
+    background: url(../../images/ndetail/fixed_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.org_all_course_detail{
+    width: 100%;
+    /* height: 600px; */
+    /* background: pink; */
+    color: #000;
+    box-shadow: 0 4px 8px 0 rgba(28,31,33,.2);
+    background: url(../../images/ndetail/fixed_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.singo_course_box{
+    width: 270px;
+    height: 218px;
+    /* background: red; */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: 0 8px 16px 0 rgba(28,31,33,.3);
+    background: url(../../images/ndetail/fixed_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+}
+
+.singo_course_box img{
+    width: 270px;
+    height: 150px;
+    box-shadow: 0 8px 16px 0 rgba(28,31,33,.3);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+}
+
+.singo_course_box .top{
+    height: 33px;
+    width: 100%;
+    /* background: rgb(235, 217, 59); */
+    font-size: 16px;
+    text-align: left;
+    text-indent: 15px;
+    line-height: 33px;
+}
+
+.singo_course_box .center{
+    height: 33px;
+    width: 100%;
+    /* background: aqua; */
+    font-size: 12px;
+    text-align: left;
+    text-indent: 15px;
+    line-height: 33px;
+}
+
+
+
+.singo_course_box .center .left{
+    height: 100%;
+    width: 50%;
+    /* background: lightblue; */
+}
+
+.singo_course_box .center .right{
+    height: 100%;
+    width: 50%;
+    /* background: antiquewhite; */
+}
+
+
+.singo_tea_box{
+    width: 180px;
+    height: 218px;
+    /* background: red; */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background: url(../../images/ndetail/fixed_bg.png);
+    box-shadow: 0 8px 16px 0 rgba(28,31,33,.1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.singo_tea_box img{
+    height: 144px;
+    width: 144px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    left: 16px;
+}
+
+.singo_tea_box .top{
+    height: 34px;
+    width: 100%;
+    /* background: red; */
+    line-height: 34px;
+}
+
+.singo_tea_box .center{
+    height: 34px;
+    width: 100%;
+    /* background: pink; */
+    line-height: 34px;
+}
+
+.org_detail_text{
+    width: 90%;
+    margin: 0 auto;
+    min-height: 60px;
+    /* background: chartreuse; */
+    font-size: 15px;
+    line-height: 20px;
+}
+/* -------------------------------机构详情页end------------------------------- */
+
+
+/* -------------------------------个人中心_我的课程------------------------------- */
+.user_center_my_course{
+    height: 50px;
+    width: 200px;
+    /*background: url(../../images/ndetail/fixed_bg.png);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    /*background: red;*/
+    /*box-shadow: 0 8px 16px 0 rgba(28,31,33,.1);*/
+    border: 1px solid #ccc;
+    margin-left: 20px;
+}
+
+
+.user_center_my_course_bigbox{
+    width: 99%;
+    /*height: 320px;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*margin-top: 20px;*/
+    background-position: center;
+    border-radius: 25px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    /*box-shadow: 0 8px 16px 0 rgba(28,31,33,.1);*/
+    /*border: 1px solid #ccc;*/
+}
+
+.user_center_my_course_detail{
+    width: 30%;
+    height: 260px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px;
+    background-position: center;
+    border-radius: 25px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 0 8px 16px 0 rgba(28,31,33,.1);
+    border: 1px solid #ccc;
+}
+
+.user_center_my_course_detail img{
+    width: 100%;
+    height: 170px;
+    border-radius: 20px;
+}
+
+.user_center_my_course_detail .lineone{
+    height: 30px;
+    width: 100%;
+    /*background: #00a2d4;*/
+}
+
+.user_center_my_course_detail .linetwo{
+    height: 40px;
+    width: 100%;
+    /*background: #1abc9c;*/
+}
+
+.user_center_my_course_detail div{
+    line-height: 40px;
+    text-align: left;
+    text-indent: 20px;
+    font-size: 14px;
+}
+/* -------------------------------个人中心_我的课程end------------------------------- */
+
+
+/* -------------------------------个人中心_我的收藏_教师/机构------------------------------- */
+.my_fav_teacher_bigbox{
+    width: 100%;
+    /*height: 2000px;*/
+    /*background: #DDDDDD;*/
+    margin-top: 20px;
+}
+
+.my_fav_teacher_detailbox{
+    width: 920px;
+    height: 160px;
+    /*background: pink;*/
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px 0 rgba(28,31,33,.2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.my_fav_teacher_detailbox .leftbox{
+    width: 200px;
+    /*background: #1abc9c;*/
+    height: 160px;
+    position: relative;
+}
+
+.my_fav_teacher_detailbox .leftbox img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    position: absolute;
+    left: 38px;
+    top: 20px;
+}
+
+.my_fav_teacher_detailbox .centerbox{
+    width: 500px;
+    height: 160px;
+    /*background: #00ad29;*/
+}
+
+.my_fav_teacher_detailbox .centerbox .middle{
+    width: 100%;
+    /*background: #01a469;*/
+    font-size: 20px;
+    line-height: 80px;
+    text-indent: 20px;
+}
+
+.my_fav_teacher_detailbox .centerbox .bottom{
+    width: 100%;
+    font-size: 13px;
+    line-height: 20px;
+    text-indent: 20px;
+}
+
+.my_fav_teacher_detailbox .rightbox{
+    width: 160px;
+    height: 160px;
+    /*background: #1abc9c;*/
+    position: relative;
+}
+
+.my_fav_teacher_detailbox .rightbox .del_fav_tea{
+    width: 90px;
+    height: 30px;
+    color: #fff;
+    background-image: linear-gradient(90deg,#6c61d3 0,#53a0fd 100%);
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -10px;
+    cursor: pointer;
+    text-shadow: 0 2px 4px rgba(28,31,33,.3);
+}
+
+
+/* -------------------------------个人中心_我的收藏_教师/机构end------------------------------- */
+
+
+/* -------------------------------个人中心_msg------------------------------- */
+.user_fav_alluse{
+    height: 50px;
+    width: 100%;
+    /*background: pink;*/
+}
+
+.user_fav_alluse .sm_box{
+    height: 50px;
+    width: 200px;
+    margin-left: 30px;
+    background: #1abc9c;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    border-radius: 25px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.user_fav_alluse .sm_box a{
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    color: #000;
+}
+
+.user_fav_alluse .sm_box a:hover{
+    color: red;
+}
+
+.sm_box_selected {
+    border: 1px solid red;
+}
+
+/* -------------------------------个人中心收藏通用_msg------------------------------- */
+
+
+/* -------------------------------个人中心_msg------------------------------- */
+.my_msg_detailbox{
+    width: 920px;
+    min-height: 100px;
+    /*background: pink;*/
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    box-shadow: 4px 4px 8px 0 rgba(28,31,33,.2);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.my_msg_detailbox .top{
+    margin: 0 auto;
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+.my_msg_detailbox .bottom{
+    margin: 0 auto;
+    padding-top: 20px;
+    font-size: 12px;
+    color: #9f9f9f;
+}
+
+/* -------------------------------个人中心_msg end------------------------------- */
+
+
+/* -------------------------------个人中心 订单------------------------------- */
+.user_center_my_order_mainbox{
+    width: 96%;
+    margin: 0 auto;
+    height: 200px;
+    /*background: pink;*/
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px 2px rgba(0,0,0,.1);
+}
+
+.user_center_my_order_mainbox .topbox{
+    height: 60px;
+    /*background: aqua;*/
+    line-height: 60px;
+    text-align: left;
+    text-indent: 20px;
+}
+
+.user_center_my_order_mainbox .middleline{
+    height: 1px;
+    width: 95%;
+    margin: 0 auto;
+    background: #DDDDDD;
+}
+
+.user_center_my_order_mainbox .bottombox{
+    height: 139px;
+    width: 100%;
+    /*background: #00a0e9;*/
+}
+
+.user_center_my_order_mainbox .bottombox .leftbox{
+    height: 100%;
+    width: 620px;
+    /*background: pink;*/
+    position: relative;
+}
+
+.user_center_my_order_mainbox .bottombox .leftbox img{
+    height: 100px;
+    width: 180px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.user_center_my_order_mainbox .bottombox .leftbox .title_box{
+    height: 44px;
+    width: 340px;
+    color: #07111b;
+    font-size: 14px;
+    line-height: 22px;
+    /*background: darkgrey;*/
+    margin-bottom: 8px;
+    position: absolute;
+    top: 30px;
+    left: 220px;
+    text-align: left;
+}
+
+.user_center_my_order_mainbox .bottombox .leftbox .order_numboxone{
+    height: 12px;
+    width: 340px;
+    line-height: 12px;
+    color: #93999f;
+    /*background: #eea236;*/
+    text-align: left;
+    position: absolute;
+    top: 80px;
+    left: 220px;
+}
+
+.user_center_my_order_mainbox .bottombox .leftbox .order_numboxone span{
+    color: red;
+}
+
+.user_center_my_order_mainbox .bottombox .leftbox .order_numboxtwo{
+    height: 12px;
+    width: 340px;
+    line-height: 12px;
+    color: #93999f;
+    /*background: #eea236;*/
+    text-align: left;
+    position: absolute;
+    top: 100px;
+    left: 220px;
+}
+
+.user_center_my_order_mainbox .bottombox .leftbox .order_numboxtwo span{
+    color: #07111b;
+}
+
+.user_center_my_order_mainbox .bottombox .rightbox{
+    position: relative;
+}
+
+.user_center_my_order_mainbox .bottombox .rightbox .msgmain_box{
+    width: 160px;
+    height: 80px;
+    /*background: pink;*/
+    position: absolute;
+    left: 65px;
+    top: 30px;
+}
+
+.user_center_my_order_mainbox .bottombox .rightbox .msgmain_box .topbox{
+    height: 50px;
+    /*background: #eea236;*/
+    width: 100%;
+    line-height: 50px;
+    color: #07111b;
+    font-size: 14px;
+    text-align: center;
+    text-indent: 0px; !important;
+}
+
+.user_center_my_order_mainbox .bottombox .rightbox .msgmain_box .bottombox{
+    height: 30px;
+    /*background: silver;*/
+    width: 100%;
+    line-height: 30px;
+    color: #93999f;
+    font-size: 12px;
+    text-align: center;
+}
+
+.order_middle_line{
+    height: 120px;
+    width: 1px;
+    background: #DDDDDD;
+    margin-top: 10px;
+
+}
+/* -------------------------------个人中心 订单end------------------------------- */
+
+
+/* -------------------------------作业------------------------------- */
+.detail_main_homework_bigbox .homework_mainbox_jx_box .homework_mainbox{
+    width: 1180px;
+    height: 300px;
+    /*background: aqua;*/
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 2px rgba(0,0,0,.1);
+
+}
+
+.detail_main_homework_bigbox .homework_mainbox_jx_box .homework_mainbox .topbox{
+    width: 100%;
+    height: 99px;
+    /*background: pink;*/
+    position: relative;
+}
+
+.detail_main_homework_bigbox .homework_mainbox_jx_box .homework_mainbox .topbox .qsbox{
+    width: 90%;
+    height: 60px;
+    /*background: greenyellow;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -531px;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: left;
+    color:#07111b;
+}
+
+.detail_main_homework_bigbox .homework_mainbox_jx_box .homework_mainbox .topbox .qsbox span{
+    color: #93999f;
+}
+
+.detail_main_homework_bigbox .homework_mainbox_jx_box .homework_mainbox .middleline{
+    width:96%;
+    height: 1px;
+    background: #DDDDDD;
+    margin: 0 auto;
+}
+
+.detail_main_homework_bigbox .homework_mainbox_jx_box .homework_mainbox .bottombox{
+    width: 100%;
+    height: 200px;
+    /*background: yellow;*/
+}
+
+.detail_main_homework_bigbox .homework_mainbox_jx_box .homework_mainbox .bottombox .sebox{
+    width: 90%;
+    height: 200px;
+    margin: 0 auto;
+    /*background: #DDDDDD;*/
+}
+
+.detail_main_homework_bigbox .homework_mainbox_jx_box .homework_mainbox .bottombox .sebox .left{
+    height: 50px;
+    width: 100px;
+    /*background: gold;*/
+    position: relative;
+}
+
+.detail_main_homework_bigbox .homework_mainbox_jx_box .homework_mainbox .bottombox .sebox .left .sebtn{
+    height: 40px;
+    width: 80px;
+    position: absolute;
+    background: #fff;
+    top: 5px;
+    left: 10px;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color:#07111b;
+    box-shadow: 0 2px 8px 2px rgba(0,0,0,.1);
+}
+
+.detail_main_homework_bigbox .homework_mainbox_jx_box .homework_mainbox .bottombox .sebox .right{
+    height: 50px;
+    width: 962px;
+    /*background: dodgerblue;*/
+    line-height: 50px;
+    color:#07111b;
+    font-size: 14px;
+    text-indent: 10px;
+}
+
+.setheight_fpercent{
+    height: 50px;
+
+}
+
+.detail_main_homework_bigbox .homework_mainbox_jx_box .homework_jxbox{
+    width: 1180px;
+    height: 120px;
+    /*background: pink;*/
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 2px rgba(0,0,0,.1);
+    display: none;
+}
+
+.detail_main_homework_bigbox .homework_mainbox_jx_box .homework_jxbox .topbox{
+    height: 49px;
+    width: 100%;
+    /*background: #00a0e9;*/
+    position: relative;
+}
+
+.detail_main_homework_bigbox .homework_mainbox_jx_box .homework_jxbox .topbox .jxbox{
+    height: 39px;
+    width: 90%;
+    position: absolute;
+    top: 5px;
+    left:58px;
+    /*background: yellow;*/
+    line-height: 39px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.detail_main_homework_bigbox .homework_mainbox_jx_box .homework_jxbox .topbox .right_or_false{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    /*background: #eea236;*/
+    left: 1000px;
+    top: 10px;
+    text-align: center;
+    color: #00ad29;
+    line-height: 30px;
+}
+
+.detail_main_homework_bigbox .homework_mainbox_jx_box .homework_jxbox .middleline{
+    width:96%;
+    height: 1px;
+    background: #DDDDDD;
+    margin: 0 auto;
+}
+
+.detail_main_homework_bigbox .homework_mainbox_jx_box .homework_jxbox .bottombox{
+    position: relative;
+}
+
+.detail_main_homework_bigbox .homework_mainbox_jx_box .homework_jxbox .bottombox .main_jx_box{
+    height: 60px;
+    width: 90%;
+    /*background: #00ad29;*/
+    position: absolute;
+    top: 5px;
+    left: 58px;
+    line-height: 30px;
+    text-align: left;
+    font-size: 16px;
+    color:#07111b;
+}
+.detail_main_homework_bigbox .homework_mainbox_jx_box .homework_jxbox .bottombox .main_jx_box span{
+    color: #93999f;
+}
+
+.detail_main_homework_bigbox .submitbtn{
+    height: 40px;
+    width: 200px;
+    margin: 0 auto;
+    font-size: 15px;
+    /*background: pink;*/
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px 2px rgba(0,0,0,.1);
+}
+
+.homework_name_title{
+    /*background: pink;*/
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 28px;
+    color:#07111b;
+    text-shadow: 0 2px 4px rgba(28,31,33,.3);
+}
+
+/* -------------------------------作业end------------------------------- */
+
+
+/*--------------------------------个人中心_个人资料-------------------------------*/
+.selectul{
+    position:relative;
+    display:inline-block;
+    cursor:pointer;
+    float:left;
+    margin-right:10px;
+}
+.selectul ul{
+    position:absolute;
+    left:0;
+    top:0px;
+    background:#fff;
+    border:1px solid #bdc3c7;
+    border-top:none;
+    padding:0px;
+    overflow:hidden;
+    overflow-y:auto;
+    display:none;
+    padding-top: 31px;
+    -webkit-box-shadow:1px 1px 2px #eee;
+    box-shadow:1px 1px 2px #eee;
+}
+.selectul ul li{
+    height:20px;
+    line-height:20px;
+    color:#6a7576;
+    font-size:12px;
+    padding:5px 10px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.selectul ul li:hover{
+    background:#666;
+    color:#fff;
+    cursor:pointer;
+}
+.selectul select{
+    display:none;
+}
+
+.selectfocus{
+    height:30px;
+    line-height:30px;
+    border:1px solid #d3dcdd;
+    background-color: #fff;
+    padding:0 0 0 8px;
+    position: relative;
+    z-index: 1002;
+}
+.selectfocus em{
+    height:30px;
+    display:block;
+    background:url(../images/select-arr-default.gif) no-repeat right 0;
+    font-style:normal;
+    color:#4b555b;
+    padding-right:8px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+
+.select_ul_show .selectfocus{
+    /*border-color:#91c4e5;
+    border-bottom-color:#edf4f8;*/
+}
+.select_ul_show .selectfocus em{
+    background-position:right -28px;
+}
+.changephone-color{
+    color: #6ec55a!important;
+}
+/*时间样式*/
+.lq-datetimepick{
+    width: 500px;
+    /*height: 280px;*/
+    padding: 10px;
+    position: absolute;
+    /*left: 50%;
+    top: 50%;
+    margin: -160px 0 0 -260px;*/
+    border: 1px solid #d3dcdd;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0 0 7px rgba(0,0,0,.2);
+    box-shadow: 0 0 7px rgba(0,0,0,.2);
+    display: none;z-index:999999;
+}
+.datetime-arr{
+    width: 13px;
+    height: 7px;
+    position: absolute;
+    left: 25px;
+    top: -7px;
+    background: url("../images/pop-tips-info-arr.gif") no-repeat 0 0;
+}
+.select-datetime{
+    width: 100%;
+    float: left;
+	height:auto;
+    *height: 222px;
+}
+.select-datetime dl{
+    height: 50px;
+}
+.select-datetime dl.datetime-day{
+    margin-bottom: 10px;
+}
+.select-datetime dl dt{
+    width: 100px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    line-height: 18px;
+    text-align: center;
+    font-size: 12px;
+    color: #4b555b;
+}
+.select-datetime dl dt a{
+    display: block;
+    padding: 7px 0;
+}
+.select-datetime dl dt span{
+    display: block;
+    border-right: 1px solid #ecf0f1;
+    margin-right: -1px;
+}
+.select-datetime dl dt.last span{
+    border-right: none;
+}
+.select-datetime dl dt span i{
+    color: #f03368;
+    margin-left: 6px;
+}
+.select-datetime dl dt em{
+    display: block;
+    font-weight: normal;
+}
+/*.select-datetime dl dt a:hover,*/
+.select-datetime dl dt.current a{
+    background-color: #13a4e7;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+/*.select-datetime dl dt a:hover i,*/
+.select-datetime dl dt.current a i{
+    color: #FFFFFF;
+}
+.select-datetime dl dt a:hover{
+    text-decoration: none;
+}
+
+.select-datetime dl dd{
+    width: 99px;
+    height: 40px;
+    float: left;
+    background-color: #fff;
+    border: 1px solid #d3dcdd;
+    padding: 7px 0 6px;
+    margin: -1px 0 0 -1px;
+    line-height: 20px;
+    text-align: center;
+    color: #4b555b;
+    cursor: pointer;
+}
+.select-datetime dl dd em{
+    font-size: 12px;
+    display: block;
+}
+.select-datetime dl dd.over{
+    color: #95a5a6;
+    background-color: #ecf0f1;
+}
+.select-datetime dl dd.selected{
+    color: #ffffff;
+    background-color: #6b7879;
+}
+
+
+
+/*年份*/
+.datetime-select{
+    height: 32px;
+    clear: both;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d3dcdd;
+}
+.datetime-select .selectul{
+    width: 100px;
+}
+
+/*日期*/
+.select-datetime dl.datetime-day{
+    height: 35px;
+}
+.select-datetime dl.datetime-day dt,
+.select-datetime dl.datetime-day dd{
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+}
+.select-datetime dl.datetime-day dt{
+    width: 71px;
+}
+.select-datetime dl.datetime-day dt span{
+    border-right: none;
+    font-size: 14px;
+    text-align: center;
+}
+
+.select-datetime dl dd.blank{
+    background-color: #fafbfb;
+}
+.select-datetime dl dd.current{
+    background-color: #f2f5f5;
+    font-weight: bold;
+}
+
+/*时分*/
+.select-datetime dl.datetime-hour dd{
+    width: 61px;
+    height: 30px;
+    line-height: 30px;
+}
+
+
+/**/
+.select-datetime dl.datetime-week{
+    height: 50px;
+}
+.select-datetime dl.datetime-week dt,
+.select-datetime dl.datetime-week dd{
+    width: 100px;
+    height: 50px;
+    line-height: 150%;
+}
+.select-datetime dl.datetime-week dt span{
+    border-right: 1px solid #ecf0f1;
+    font-size: 12px;
+    text-align: center;
+    margin-right: -1px;
+}
+.select-datetime dl dt.last span{
+    border-right: none;
+}
+/*--------------------------------个人中心_个人资料end-------------------------------*/

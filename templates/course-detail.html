@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}课程详情{% endblock %}
+{% block custom_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ncss.css' %}">
+{% endblock %}
+{% block content %}
+
+    <section>
+        <div class="detail_main_head">
+            <div class="wp">
+                <div class="top_daohang">
+                    <ul>
+                        <li><a href="{% url 'index' %}">首页</a>&nbsp;>&nbsp;</li>
+                        <li><a href="{% url 'course:list' %}">公开课</a>&nbsp;>&nbsp;</li>
+                        <li><a href="">课程详情</a></li>
+                    </ul>
+                </div>
+                <div class="main_title">
+                    <h1>{{ course.name }}</h1>
+                </div>
+                <div class="desc_title">
+                    <h3>{{ course.notice }}</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="fixed-wrap">
+        <div class="warpbox">
+            <div class="warpbox_left fl">
+                <div class="warpbox_left_top">
+                    <div class="pricetext fl">
+                        <span>
+                        {% if course.price == 0 %}
+                            免费
+                        {% elif pay_status == 1 %}
+                            已购买
+                        {% else %}
+                            {{ course.price }}¥
+                        {% endif %}
+                        </span>
+                    </div>
+                    <div class="fav_btn fl" id="jsLeftBtn"><span>{% if has_fav_course %}已收藏{% else %}
+                        收藏{% endif %}</span></div>
+                </div>
+                <div class="warpbox_left_bottom">
+                    <span>难度:&nbsp;</span>
+                    <span class="normal_font">{{ course.get_degree_display }}</span>
+                    <i>&nbsp;&nbsp;·&nbsp;&nbsp;</i>
+                    <span>时长:</span>
+                    <span class="normal_font">{{ course.learn_times }}</span>
+                    <i>&nbsp;&nbsp;·&nbsp;&nbsp;</i>
+                    <span>学习人数:</span>
+                    <span class="normal_font">{{ course.students }}</span>
+                    <i>&nbsp;&nbsp;·&nbsp;&nbsp;</i>
+                    <span>点击人数:</span>
+                    <span class="normal_font">{{ course.click_nums }}</span>
+                </div>
+            </div>
+            <div class="warpbox_right fl">
+                <div class="seeorbuy">
+                    <span>
+                        {% if course.price == 0 or pay_status == 1 %}
+                            <a href="{% url 'course:lesson' course.id %}">开始学习</a>
+                        {% else %}
+                            <a href="/purchase/{{ course.id }}" target="_blank">立即购买</a>
+                        {% endif %}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="wp">
+            <div class="teadesc_main_big_box">
+                <div class="teadesc_main_box">
+                    <div class="teadesc_left fl">
+                        <div class="teadesc_left_textarea">
+                            <div class="top_text"><span>{{ course.name }}</span></div>
+                            <div class="bottom_text"><span>{{ course.desc }}</span></div>
+                        </div>
+                    </div>
+                    <div class="textline fl"></div>
+                    <div class="teadesc_right fl">
+                        <div class="tea_header_img"><a href="{% url 'org:teacher_detail' course.teacher.id %}"><img src="{{ course.teacher.image.url }}" alt=""></a></div>
+                        <div class="tea_name"><a href="{% url 'org:teacher_detail' course.teacher.id %}" style="color: #ffffff;"><span>{{ course.teacher }}</span></a></div>
+                        <div class="tea_desc"><span>{{ course.teacher.work_position }}</span></div>
+                        <div class="tea_org_name"><a href="{% url 'org:home' course.course_org.id %}"><span>{{ course.course_org.name }}</span></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wp clear_course_detail clearfix">
+            <div class="course_detail_bigbox fl clearfix">
+                <div class="course_detail_title"><span>课程详情</span></div>
+                <div class="course_detail_mainbox">
+                    {% autoescape off %}{{ course.detail }}{% endautoescape %}
+                </div>
+            </div>
+            <div class="course_recommend_bigbox fl clearfix">
+                <div class="course_recommend_title"><span>课程推荐</span></div>
+                <div class="course_recommend_mainbox">
+                    <div style="width: 100%;min-height: 590px;">
+                    {% for course in related_courses %}
+                        <div class="detail_recommand_box fl"
+                             style="margin: 20px 0px 0 20px;box-shadow: 0 8px 16px 0 rgba(28,31,33,.1);width: 275px;height: 270px;left: 27px">
+                            <div class="index_new_course_box"
+                                 style="height: 100%;width: 100%;margin: 0;padding: 0">
+                                <a href="{% url 'course:detail' course.id %}"><img
+                                        src="{{ course.image.url }}"
+                                        alt=""
+                                        id="index_newcourse_img"></a>
+                                <div id="index_new_course_title_box">{{ course.name }}</div>
+                                <div id="index_new_course_desc_box">{{ course.get_degree_display }}&nbsp;&nbsp;&nbsp;&nbsp;学习人数:&nbsp;{{ course.students }}人&nbsp;&nbsp;&nbsp;&nbsp;时长:&nbsp;{{ course.learn_times }}</div>
+                                <div id="index_new_course_price_box">{% if course.price == 0 %}免费
+                                    {% else %}{{ course.price }}¥{% endif %}</div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}
+
+{% block custom_js %}
+
+    <script type="text/javascript">
+        //收藏分享
+        function add_fav(current_elem, fav_id, fav_type) {
+            $.ajax({
+                cache: false,
+                type: "POST",
+                url: "{% url 'op:fav' %}",
+                data: {'fav_id': fav_id, 'fav_type': fav_type},
+                async: true,
+                beforeSend: function (xhr, settings) {
+                    xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+                },
+                success: function (data) {
+                    if (data.status == 'fail') {
+                        if (data.msg == '用户未登录') {
+                            window.location.href = "{% url 'login' %}";
+                        } else {
+                            alert(data.msg)
+                        }
+                    } else if (data.status == 'success') {
+                        current_elem.text(data.msg)
+                    }
+                },
+            });
+        }
+
+        $(document).ready(function () {
+            $('#jsLeftBtn').on('click', function () {
+                add_fav($(this), {{ course.id }}, 1);
+            });
+        });
+    </script>
+
+{% endblock %}
