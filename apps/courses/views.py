@@ -86,12 +86,6 @@ def show_msg(request):
         return render(request, 'show_msg.html', {'msg': '只支持GET请求，不支持其它请求'})
 
 
-#简略查看订单
-def order_list(request):
-    order_obj = Order.objects.all()
-    return render(request, 'order_list.html', {'order_obj': order_obj})
-
-
 
 
 
@@ -236,7 +230,7 @@ class CourseDetailView(View):
                 has_fav_course = True
 
 
-        # 通过课程tag做课程推荐
+        # 课程推荐
         tags = course.coursetag_set.all()#找到所有把课程标签
         tag_list = [tag.tag for tag in tags]#课程标签数组
         course_tags = CourseTag.objects.filter(tag__in=tag_list).exclude(course__id=course.id)#找相似标签去重复

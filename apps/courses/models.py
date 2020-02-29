@@ -37,14 +37,9 @@ class Course(BaseModel):
     fav_nums = models.IntegerField(default=0, verbose_name="收藏人数")
     click_nums = models.IntegerField(default=0, verbose_name="点击数")
     notice = models.CharField(verbose_name="课程公告", max_length=300, default="")
-    category = models.CharField(default=u"后端开发", max_length=20, verbose_name="课程类别")
-    # tag = models.CharField(default="", verbose_name="课程标签", max_length=10)
-    # youneed_know = models.CharField(default="", max_length=300, verbose_name="课程须知")
-    # teacher_tell = models.CharField(default="", max_length=300, verbose_name="老师告诉你")
-    # is_classics = models.BooleanField(default=False, verbose_name="是否经典")
+    category = models.CharField(default="后端开发", max_length=20, verbose_name="课程类别")
     detail = UEditorField(verbose_name="课程详情", width=600, height=300, imagePath="courses/ueditor/images/",
                           filePath="courses/ueditor/files/", default="")
-    # is_banner = models.BooleanField(default=False, verbose_name="是否广告位")
     image = models.ImageField(upload_to="courses/%Y/%m", verbose_name="封面图", max_length=100)
     needpay = models.BooleanField(default=False, verbose_name="是否付费课程")
     price = models.IntegerField(default=0, verbose_name="价格")
@@ -71,12 +66,6 @@ class Course(BaseModel):
         return mark_safe("<a href='/course/{}'>跳转</a>".format(self.id))
     go_to.short_description = "跳转"
 
-#多个管理器管理相同数据
-# class BannerCourse(Course):
-#     class Meta:
-#         verbose_name = "轮播课程"
-#         verbose_name_plural = verbose_name
-#         proxy = True
 
 
 class CourseTag(BaseModel):

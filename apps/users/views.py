@@ -49,12 +49,7 @@ class MyOrderView(LoginRequiredMixin, View):
 
 
 
-#未读消息
-def message_nums(request):
-    if request.user.is_authenticated:
-        return {'unread_nums':request.user.usermessage_set.filter(has_read=False).count()}
-    else:
-        return {}
+
 
 
 
@@ -65,9 +60,6 @@ class MyMessageView(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         messages = UserMessage.objects.filter(user=request.user)
         current_page = "message"
-        for message in messages:
-            message.has_read = True
-            message.save()
         # 分页
         try:
             page = request.GET.get('page', 1)
@@ -335,7 +327,6 @@ class LoginView(View):
         login_form = LoginForm(request.POST)
         banners = Banner.objects.all()[:3]
         if login_form.is_valid():
-
             #----------------------------通过forms.py进行表单验证并拿取数据-------------
             user_name = login_form.cleaned_data["username"]
             password = login_form.cleaned_data["password"]

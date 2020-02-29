@@ -14,9 +14,9 @@ from apps.operations.models import Banner
 class IndexView(View):
     def get(self, request, *args, **kwargs):
         banners = Banner.objects.all().order_by("index")
-        bannerone = banners[0];
-        bannertwo = banners[1];
-        bannerthree = banners[2];
+        bannerone = banners[0]
+        bannertwo = banners[1]
+        bannerthree = banners[2]
         courses = Course.objects.all()[:8]#首页下方课程
         s_type = "course"
         return render(request, "index.html",{

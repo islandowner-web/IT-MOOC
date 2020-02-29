@@ -31,6 +31,8 @@ from apps.courses import views
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
+
+    #一级单页面url
     path('xadmin/', xadmin.site.urls),
     path('', IndexView.as_view(), name="index"),
     path('login/', LoginView.as_view(), name="login"),
@@ -40,19 +42,19 @@ urlpatterns = [
     url(r'^captcha/', include('captcha.urls')),
     url(r'^send_sms/', csrf_exempt(SendSmsView.as_view()), name="send_sms"),
 
-    #配置上传文件访问url
+    #上传文件
     url(r'^media/(?P<path>.*)$', serve, {"document_root":MEDIA_ROOT}),
 
-    #机构相关页面
+    #机构
     url(r'^org/', include(('apps.organizations.urls', "organizations"), namespace="org")),
 
-    #机构相关页面
+    #课程
     url(r'^course/', include(('apps.courses.urls', "courses"), namespace="course")),
 
-    #用户相关操作
+    #行为
     url(r'^op/', include(('apps.operations.urls', "operations"), namespace="op")),
 
-    ##个人中心
+    #用户
     url(r'^users/', include(('apps.users.urls', "users"), namespace="users")),
 
     #富文本编辑器
@@ -61,7 +63,6 @@ urlpatterns = [
     #支付宝付款
     path('purchase/<course_id>/', views.purchase),
     path('show_msg/', views.show_msg),
-    path('order_list/', views.order_list),
 
 ]
 

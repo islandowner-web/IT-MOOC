@@ -20,7 +20,7 @@
 <div class="all_page_head">
     <div class="wp">
         <div class="all_page_head_message clearfix" style="height: 72px;width: 100%;">
-            <a href=""><img src="{% static 'images/logo_11261.png' %}" alt="" style="height: 72px" class="fl"></a>
+            <a href="{% url 'index' %}"><img src="{% static 'images/logo_11261.png' %}" alt="" style="height: 72px" class="fl"></a>
             <div class="go_url_box fl" style="height: 72px;width: 300px;">
                 <a href="{% url 'index' %}"><div class="url_div_box fl" style="text-indent: 30px">首页</div></a>
                 <a href="{% url 'course:list' %}"><div class="url_div_box fl">课程</div></a>
@@ -302,7 +302,6 @@
 <script type="text/javascript" src="{% static 'js/plugins/laydate/laydate.js' %}"></script>
 <script src="{% static 'js/plugins/layer/layer.js' %}"></script>
 {#日期控件#}
-{#<script src="{% static 'js/unslider.js' %}" type="text/javascript"></script>#}
 <script src="{% static 'js/plugins/jquery.scrollLoading.js' %}" type="text/javascript"></script>
 <script src="{% static 'js/jquery/deco-common.js' %}" type="text/javascript"></script>
 <script src="{% static 'js/deco-user.js' %}"></script>

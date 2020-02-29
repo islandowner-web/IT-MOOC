@@ -33,7 +33,6 @@
 
             <div class="pageturn pagerright">
                 <ul class="pagelist">
-                    {#                {{ all_orgs.render }}#}
                     {% if messages.has_previous %}
                         <li class="long"><a href="?{{ messages.previous_page_number.querystring }}">上一页</a></li>
                     {% endif %}

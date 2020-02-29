@@ -17,7 +17,6 @@ class BaseSettings(object):
 
 class LessonInline(object):
     model = Lesson
-    # style = "tab"
     extra = 0
     exclude = ["add_time"] #屏蔽字段不显示
 
@@ -29,37 +28,12 @@ class CourseResourceInline(object):
 
 
 
-class CourseAdmin(object):
-    list_display = ["name", "desc", "detail", "degree", "learn_times", "students"]
-    search_fields = ["name", "desc", "detail", "degree", "students"]
-    list_filter = ["name", "desc", "teacher__name", "detail", "degree", "learn_times", "students"]
-    list_editable = ["degree", "desc"]
-
-
-# class BannerCourseAdmin(object):
-#     list_display = ["name", "teacher", "desc", "detail", "degree", "learn_times", "students"]
-#     search_fields = ["name", "desc", "detail", "degree", "students"]
-#     list_filter = ["name", "desc", "teacher__name", "detail", "degree", "learn_times", "students"]
-#     list_editable = ["degree", "desc"]
-
-
-
-#改造courseadmin
 class NewCourseAdmin(object):
     list_display = ["name", "show_image", "go_to", "degree", "learn_times", "students"]
     search_fields = ["name", "desc", "detail", "degree", "students"]
     list_filter = ["name", "desc", "teacher__name", "detail", "degree", "learn_times", "students"]
     list_editable = ["degree", "desc", "name"]
-    #设置只读不可修改
-    # readonly_fields = ["click_nums", "fav_nums", "students", "add_time"]
-    # readonly_fields = ["students", "add_time"]
-    #设置某些字段不可见
-    # exclude = ["click_nums", "fav_nums"]
-    #排序,按点击数倒序
     ordering = ["-click_nums"]
-    #设置图标
-    # model_icon = 'fa fa-address-book'
-    #继承配置
     inlines = [LessonInline, CourseResourceInline]
     #富文本编辑器
     style_fields = {
@@ -92,11 +66,6 @@ class NewCourseAdmin(object):
                          'fav_nums', 'click_nums', 'students', 'add_time'
                          ),
             ),
-            # Side(
-            #     Fieldset("选择信息",
-            #              'is_banner'
-            #              ),
-            # )
         )
         return super(NewCourseAdmin, self).get_form_layout()
 
@@ -142,7 +111,6 @@ class VideoAdmin(object):
 
     def get_context(self):
         context = super(VideoAdmin, self).get_context()
-        # print(context)
         if not self.request.user.is_superuser:
             if 'form' in context:
                 context['form'].fields['teacher'].queryset = Teacher.objects.filter(name=self.request.user.teacher)
@@ -165,7 +133,7 @@ class CourseResourceAdmin(object):
             print(self.request.user.teacher)
         return qs
 
-    # context内form内含有所有可修改的表单，对表单内容进行筛选使教师只能修改自己对应的课程作业
+    # context内form内含有所有可修改的表单，对表单内容进行筛选使教师只能修改自己对应的课程
     def get_context(self):
         context = super(CourseResourceAdmin, self).get_context()
         if not self.request.user.is_superuser:
@@ -198,7 +166,7 @@ class CourseHomeworkAdmin(object):
             qs = qs.filter(teacher=self.request.user.teacher)
         return qs
 
-    # context内form内含有所有可修改的表单，对表单内容进行筛选使教师只能修改自己对应的课程作业
+    # context内form内含有所有可修改的表单，对表单内容进行筛选使教师只能修改自己对应的课程
     def get_context(self):
         context = super(CourseHomeworkAdmin, self).get_context()
         # print(context)
@@ -238,8 +206,6 @@ class CourseHomeworkDetailAdmin(object):
         return context
 
 
-# xadmin.site.register(Course,CourseAdmin)
-# xadmin.site.register(BannerCourse, BannerCourseAdmin)
 xadmin.site.register(Course,NewCourseAdmin)
 xadmin.site.register(Lesson,LessonAdmin)
 xadmin.site.register(Video,VideoAdmin)
