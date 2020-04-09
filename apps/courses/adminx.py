@@ -27,7 +27,6 @@ class CourseResourceInline(object):
     extra = 1
 
 
-
 class NewCourseAdmin(object):
     list_display = ["name", "show_image", "go_to", "degree", "learn_times", "students"]
     search_fields = ["name", "desc", "detail", "degree", "students"]
