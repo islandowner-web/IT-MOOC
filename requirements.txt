@@ -1,4 +1,43 @@
-django==2.2
-mysqlclient
-pillow
-django-pure-pagination
+alipay-sdk-python      3.3.202  
+backports.csv          1.0.7
+certifi                2019.9.11
+chardet                3.0.4
+defusedxml             0.6.0
+diff-match-patch       20181111
+Django                 2.2
+django-crispy-forms    1.7.2
+django-formtools       2.1
+django-import-export   1.2.0
+django-pure-pagination 0.3.0
+django-ranged-response 0.2.0
+django-reversion       3.0.4
+django-simple-captcha  0.5.12
+et-xmlfile             1.0.1
+future                 0.17.1
+httplib2               0.14.0
+idna                   2.8
+jdcal                  1.4.1
+mysqlclient            1.4.4
+odfpy                  1.4.0
+openpyxl               3.0.0    
+Pillow                 6.2.0
+pip                    19.2.3
+pyasn1                 0.4.8
+pycrypto               2.6.1
+pycryptodome           3.9.4
+pytz                   2019.2
+PyYAML                 5.1.2
+redis                  3.3.8
+requests               2.22.0
+reversion              0.2
+rsa                    4.0
+setuptools             41.2.0
+six                    1.12.0
+sqlparse               0.3.0
+tablib                 0.13.0
+toml                   0.10.0
+urllib3                1.25.6
+wheel                  0.33.6
+xlrd                   1.2.0
+XlsxWriter             1.2.1
+xlwt                   1.3.0
