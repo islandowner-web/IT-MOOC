@@ -6,8 +6,8 @@ from apps.organizations.models import Teacher, CourseOrg
 
 #xadmin界面配置---页头页脚
 class GlobalSettings(object):
-    site_title = "IT·MOOC后台管理系统"
-    site_footer = "IT·MOOC后台管理系统"
+    site_title = "Cloud·MOOC后台管理系统"
+    site_footer = "Cloud·MOOC后台管理系统"
 
 #xadmin界面配置---主题
 class BaseSettings(object):
