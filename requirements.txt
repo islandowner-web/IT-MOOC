@@ -1,4 +1,4 @@
-django==2.2
+django==2.2.18
 mysqlclient
 pillow
 django-pure-pagination
